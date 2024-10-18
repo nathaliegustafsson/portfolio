@@ -1,4 +1,4 @@
-import Cv from "../components/CV";
+import Cv from "../components/Cv";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
