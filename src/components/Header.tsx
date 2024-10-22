@@ -11,9 +11,9 @@ function Header() {
     return (
         <BigContainer>
             <Container>
-                <a href="/">
+                <LogoLink href="/">
                     <LogoImg src="/initials-logo.png" alt="initials-logo" />
-                </a>
+                </LogoLink>
                 <LinksContainer>
                 {headerLinks.map((link) => (
                         <HeaderLink key={link.text} href={link.href}>
@@ -31,13 +31,20 @@ function Header() {
 const BigContainer = styled.div`
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 `;
 
 const Container = styled.div`
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+`;
+
+const LogoLink = styled.a`
+    display: flex;
+    align-items: center;
 `;
 
 const LogoImg = styled.img`
