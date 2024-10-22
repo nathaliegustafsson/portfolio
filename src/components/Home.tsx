@@ -25,13 +25,16 @@ function Home() {
 const BigContainer = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 200px;
 `;
 
 const TitleName = styled.h1`
     font-size: 100px;
     font-family: 'NewYork';
     font-weight: 100;
-    margin-bottom: 0px;
+    margin: 0px;
 `;
 
 const RoleBox = styled.div`
@@ -63,6 +66,7 @@ const ShortText = styled.h6`
     font-weight: 300;
     font-size: 24px;
     margin-top: 20px;
+    margin-bottom: 0;
 `;
 
 export default Home;
