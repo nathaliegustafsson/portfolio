@@ -54,7 +54,7 @@ const Line = styled.div`
 const RoleTitle = styled.h3`
     font-family: 'Montserrat';
     font-weight: 300;
-    font-size: 40px;
+    font-size: 35px;
     margin: 0px;
 `;
 
