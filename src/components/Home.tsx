@@ -3,7 +3,7 @@ import styled from "styled-components";
 function Home() {
     return (
         <BigContainer>
-            <Container>
+            <div>
             <TitleName>Nathalie Gustafsson</TitleName>
             <RoleBox>
                 <LineBox>
@@ -16,24 +16,19 @@ function Home() {
                 I enjoy both designing and developing user-friendly interfaces that make <br/>
                 digital experiences visually appealing and easy to use.
             </ShortText>
-            </Container>
+            </div>
         </BigContainer>
     )
 }
 
 // Styling
 const BigContainer = styled.div`
-    background-color: pink;
     display: flex;
     justify-content: center;
 `;
 
-const Container = styled.div`
-    background-color: lightblue;
-`;
-
 const TitleName = styled.h1`
-    font-size: 150px;
+    font-size: 100px;
     font-family: 'NewYork';
     font-weight: 100;
     margin-bottom: 0px;
