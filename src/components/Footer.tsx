@@ -13,8 +13,7 @@ function Footer() {
 
 // Styling
 const Container = styled.div`
-    background-color: pink;
-    border-top: 2px solid black;
+    border-top: 1px solid black;
     height: 100px;
     display: flex;
     justify-content: center;
