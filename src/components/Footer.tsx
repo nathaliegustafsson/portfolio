@@ -1,11 +1,32 @@
 import styled from "styled-components";
 
 function Footer() {
+    const footerLinks = [
+        {
+            href: "https://github.com/nathaliegustafsson",
+            src: "/github-icon.svg",
+            alt: "github-icon"
+        },
+        {
+            href: "https://www.linkedin.com/in/nathalie-gustafsson-5393b415a/",
+            src: "/linkedin-icon.svg",
+            alt: "linkedin-icon"
+        }
+    ]
+
     return (
         <Container>
             <IconContainer>
-                <Icon src="/github-icon.svg" alt="github-icon" />
-                <Icon src="/linkedin-icon.svg" alt="linkedin-icon" />
+                {footerLinks.map((link, index) => (
+                    <a
+                        key={index}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Icon src={link.src} alt={link.alt}/>
+                    </a>
+                ))}
             </IconContainer>
         </Container>
     )
