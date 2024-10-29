@@ -49,7 +49,8 @@ const IconContainer = styled.div`
 `;
 
 const Icon = styled.img`
-    height: 30px;
+    height: 25px;
+    cursor: pointer;
 `;
 
 // const Container = styled.div`
