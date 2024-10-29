@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../styles/breakpoints";
 
 function Footer() {
     const footerLinks = [
@@ -32,42 +33,32 @@ function Footer() {
     )
 }
 
-// Styling 
+// Styling
 const Container = styled.div`
     border-top: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding: 15px 0;
 `;
 
 const IconContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 20px;
+
+    @media ${media.mobile} {
+        gap: 30px;
+    }
 `;
 
 const Icon = styled.img`
     height: 25px;
     cursor: pointer;
+
+    @media ${media.mobile} {
+        height: 35px;
+    }
 `;
-
-// const Container = styled.div`
-//     border-top: 1px solid black;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// `;
-
-// const IconContainer = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     gap: 20px;
-// `;
-
-// const Icon = styled.img`
-//     height: 45px;
-// `;
 
 export default Footer;

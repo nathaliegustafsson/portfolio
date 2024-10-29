@@ -48,7 +48,7 @@ function Header() {
 const BigContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin: 10px 10px 0 10px;
+    margin: 10px 15px 0 10px;
 `;
 
 const Container = styled.div`
@@ -76,9 +76,9 @@ const LinksContainer = styled.div`
     display: none;
     align-items: center;
     width: auto;
-    gap: 50px;
+    gap: 40px;
 
-    @media ${media.tablet} {
+    @media ${media.mobile} {
         display: flex;
     }
 `;
@@ -99,7 +99,7 @@ const HamburgerIcon = styled.img`
     display: flex;
     width: 20px;
 
-    @media ${media.tablet} {
+    @media ${media.mobile} {
         display: none;
     }
 `;
