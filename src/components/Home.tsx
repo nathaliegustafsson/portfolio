@@ -33,7 +33,7 @@ const BigContainer = styled.div`
 
 const TitleName = styled.h1`
     font-family: 'NewYork';
-    font-size: 65px;
+    font-size: 55px;
     font-weight: 100;
     margin-bottom: 5px;
 `;
@@ -57,7 +57,7 @@ const Line = styled.div`
 
 const RoleTitle = styled.h3`
     font-family: 'Montserrat';
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     margin: 0px;
 `;
