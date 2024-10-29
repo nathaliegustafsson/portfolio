@@ -87,6 +87,7 @@ const HeaderLink = styled.a`
     font-family: "Montserrat";
     text-decoration: none;
     color: black;
+    cursor: pointer;
 
     &:hover {
         text-decoration: underline;
