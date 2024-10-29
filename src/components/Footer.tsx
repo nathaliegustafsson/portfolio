@@ -32,13 +32,14 @@ function Footer() {
     )
 }
 
-// Styling
+// Styling 
 const Container = styled.div`
     border-top: 1px solid black;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
 `;
 
 const IconContainer = styled.div`
@@ -48,7 +49,24 @@ const IconContainer = styled.div`
 `;
 
 const Icon = styled.img`
-    height: 45px;
+    height: 30px;
 `;
+
+// const Container = styled.div`
+//     border-top: 1px solid black;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// `;
+
+// const IconContainer = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     gap: 20px;
+// `;
+
+// const Icon = styled.img`
+//     height: 45px;
+// `;
 
 export default Footer;
