@@ -48,11 +48,19 @@ const TitleName = styled.h1`
     @media ${media.tablet} {
         font-size: 80px;
     }
+
+    @media ${media.desktop} {
+        font-size: 100px;
+    }
 `;
 
 const RoleBox = styled.div`
     display: flex;
     gap: 10px;
+
+    @media ${media.tablet} {
+        gap: 24px;
+    }
 `;
 
 const LineBox = styled.div`
@@ -73,6 +81,10 @@ const Line = styled.div`
     @media ${media.tablet} {
         width: 80px;
     }
+
+    @media ${media.desktop} {
+        width: 100px;
+    }
 `;
 
 const RoleTitle = styled.h3`
@@ -87,6 +99,10 @@ const RoleTitle = styled.h3`
 
     @media ${media.tablet} {
         font-size: 30px;
+    }
+
+    @media ${media.desktop} {
+        font-size: 35px;
     }
 `;
 
@@ -104,56 +120,12 @@ const ShortText = styled.h6`
 
     @media ${media.tablet} {
         font-size: 20px;
-       
+    }
+
+    @media ${media.desktop} {
+        font-size: 24px;
+        max-width: 860px;
     }
 `;
-
-
-// const BigContainer = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 100%;
-//     margin-bottom: 200px;
-// `;
-
-// const TitleName = styled.h1`
-//     font-size: 100px;
-//     font-family: 'NewYork';
-//     font-weight: 100;
-//     margin: 0px;
-// `;
-
-// const RoleBox = styled.div`
-//     display: flex;
-//     gap: 24px;
-// `;
-
-// const LineBox = styled.div`
-//     display: flex;
-//     align-items: center;
-//     justify-items: center;
-// `;
-
-// const Line = styled.div`
-//     width: 180px;
-//     height: 2px;
-//     background-color: black;
-// `;
-
-// const RoleTitle = styled.h3`
-//     font-family: 'Montserrat';
-//     font-weight: 300;
-//     font-size: 35px;
-//     margin: 0px;
-// `;
-
-// const ShortText = styled.h6`
-//     font-family: 'Montserrat';
-//     font-weight: 300;
-//     font-size: 24px;
-//     margin-top: 20px;
-//     margin-bottom: 0;
-// `;
 
 export default Home;
