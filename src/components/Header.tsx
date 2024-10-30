@@ -70,6 +70,10 @@ const LogoImg = styled.img`
     @media ${media.mobile} {
         height: 50px;
     }
+
+    @media ${media.tablet} {
+        height: 60px;
+    }
 `;
 
 const LinksContainer = styled.div`
@@ -85,6 +89,7 @@ const LinksContainer = styled.div`
 
 const HeaderLink = styled.a`
     font-family: "Montserrat";
+    font-size: 18px;
     text-decoration: none;
     color: black;
     cursor: pointer;
@@ -94,6 +99,10 @@ const HeaderLink = styled.a`
         text-decoration-thickness: 0.01rem;
         text-underline-offset: 0.3rem;
     }  
+
+    @media ${media.tablet} {
+        font-size: 20px;
+    }
 `;
 
 const HamburgerIcon = styled.img`
