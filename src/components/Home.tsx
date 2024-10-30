@@ -49,8 +49,8 @@ const TitleName = styled.h1`
         font-size: 80px;
     }
 
-    @media ${media.desktop} {
-        font-size: 100px;
+    @media ${media.desktopXL} {
+        font-size: 90px;
     }
 `;
 
@@ -59,6 +59,10 @@ const RoleBox = styled.div`
     gap: 10px;
 
     @media ${media.tablet} {
+        gap: 20px;
+    }
+
+    @media ${media.desktopXL} {
         gap: 24px;
     }
 `;
@@ -82,8 +86,8 @@ const Line = styled.div`
         width: 80px;
     }
 
-    @media ${media.desktop} {
-        width: 100px;
+    @media ${media.desktopXL} {
+        width: 90px;
     }
 `;
 
@@ -99,10 +103,6 @@ const RoleTitle = styled.h3`
 
     @media ${media.tablet} {
         font-size: 30px;
-    }
-
-    @media ${media.desktop} {
-        font-size: 35px;
     }
 `;
 
@@ -122,9 +122,9 @@ const ShortText = styled.h6`
         font-size: 20px;
     }
 
-    @media ${media.desktop} {
-        font-size: 24px;
-        max-width: 860px;
+    @media ${media.desktopXL} {
+        font-size: 22px;
+        max-width: 790px;
     }
 `;
 

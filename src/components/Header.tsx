@@ -71,7 +71,7 @@ const LogoImg = styled.img`
         height: 50px;
     }
 
-    @media ${media.tablet} {
+    @media ${media.desktopXL} {
         height: 60px;
     }
 `;
@@ -98,10 +98,6 @@ const HeaderLink = styled.a`
         text-decoration: underline;
         text-decoration-thickness: 0.01rem;
         text-underline-offset: 0.3rem;
-    }  
-
-    @media ${media.tablet} {
-        font-size: 20px;
     }
 `;
 

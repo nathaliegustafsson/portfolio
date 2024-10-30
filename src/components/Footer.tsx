@@ -60,7 +60,7 @@ const Icon = styled.img`
         height: 35px;
     }
 
-    @media ${media.tablet} {
+    @media ${media.desktopXL} {
         height: 45px;
     }
 `;
