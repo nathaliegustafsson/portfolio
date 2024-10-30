@@ -59,6 +59,10 @@ const Icon = styled.img`
     @media ${media.mobile} {
         height: 35px;
     }
+
+    @media ${media.tablet} {
+        height: 45px;
+    }
 `;
 
 export default Footer;
