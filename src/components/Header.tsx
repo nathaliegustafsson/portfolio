@@ -72,7 +72,7 @@ const LogoImg = styled.img`
     }
 
     @media ${media.desktopXL} {
-        height: 60px;
+        height: 55px;
     }
 `;
 

@@ -56,12 +56,16 @@ const Icon = styled.img`
     height: 25px;
     cursor: pointer;
 
+    &:hover {
+        opacity: 0.6;
+    }
+
     @media ${media.mobile} {
         height: 35px;
     }
 
     @media ${media.desktopXL} {
-        height: 45px;
+        height: 40px;
     }
 `;
 
