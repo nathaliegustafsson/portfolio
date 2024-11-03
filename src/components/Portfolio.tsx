@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { projects } from '../data/projectsData';
 import { media } from '../styles/breakpoints';
@@ -12,21 +13,23 @@ function Portfolio() {
 				</div>
 				<ProjectsBigContainer>
 					{projects.map((project) => (
-						<ProjectsContainer>
-							<ProjectList>
-								<NumberAndTitleContainer>
-									<ProjectNumberContainer>
-										<ProjectNumber>{project.number}.</ProjectNumber>
-									</ProjectNumberContainer>
-									<div>
-										<ProjectName>{project.title}</ProjectName>
-									</div>
-								</NumberAndTitleContainer>
-								<ReadMoreContainer>
-									<ReadMoreText>Read more</ReadMoreText>
-									<Arrow src="/Arrow.png" alt="arrow-image" />
-								</ReadMoreContainer>
-							</ProjectList>
+						<ProjectsContainer key={project.id}>
+							<StyledLink to={`/portfolio/${project.id}`}>
+								<ProjectList>
+									<NumberAndTitleContainer>
+										<ProjectNumberContainer>
+											<ProjectNumber>{project.number}.</ProjectNumber>
+										</ProjectNumberContainer>
+										<div>
+											<ProjectName>{project.title}</ProjectName>
+										</div>
+									</NumberAndTitleContainer>
+									<ReadMoreContainer>
+										<ReadMoreText>Read more</ReadMoreText>
+										<Arrow src="/Arrow.png" alt="arrow-image" />
+									</ReadMoreContainer>
+								</ProjectList>
+							</StyledLink>
 							<Line />
 						</ProjectsContainer>
 					))}
@@ -50,6 +53,11 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
+`;
+
+const StyledLink = styled(Link)`
+	text-decoration: none;
+	color: black;
 `;
 
 const ProjectsBigContainer = styled.div`
