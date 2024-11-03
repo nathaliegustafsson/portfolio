@@ -1,16 +1,16 @@
 export interface Collaborators {
-    name: string;
-    githubUrl: string;
+	name: string;
+	githubUrl: string;
 }
 
 export interface Project {
-    id: string;
-    number: string;
-    title: string;
-    description: string;
-    image1: string; 
-    image2: string;
-    url: string;
-    technologies: string;
-    collaborators?: Collaborators[];
+	id: string;
+	number: string;
+	title: string;
+	description: string;
+	image1: string;
+	image2: string;
+	url: string;
+	technologies: string;
+	collaborators?: Collaborators[];
 }
