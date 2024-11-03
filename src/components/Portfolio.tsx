@@ -45,25 +45,15 @@ const BigContainer = styled.div`
 	flex-direction: column;
 	margin-top: 20px;
 	height: 100%;
-	width: auto;
+	width: 85%;
 	padding: 20px;
+	max-width: 1200px;
 `;
 
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
-`;
-
-const StyledLink = styled(Link)`
-	text-decoration: none;
-	color: black;
-`;
-
-const ProjectsBigContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
 `;
 
 const Title = styled.h1`
@@ -89,7 +79,14 @@ const Title = styled.h1`
 
 const InfoText = styled.p`
 	font-family: 'Montserrat';
-	font-size: 10px;
+	font-size: 11px;
+`;
+
+
+const ProjectsBigContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 `;
 
 const ProjectsContainer = styled.div`
@@ -98,9 +95,9 @@ const ProjectsContainer = styled.div`
 	gap: 5px;
 `;
 
-const NumberAndTitleContainer = styled.div`
-	display: flex;
-	gap: 5px;
+const StyledLink = styled(Link)`
+	text-decoration: none;
+	color: black;
 `;
 
 const ProjectList = styled.div`
@@ -113,20 +110,19 @@ const ProjectList = styled.div`
 	}
 `;
 
-const ProjectNumber = styled.div`
-	margin: 0;
-	font-family: 'NewYork';
-	font-size: 18px;
+const NumberAndTitleContainer = styled.div`
+	display: flex;
+	gap: 5px;
 `;
 
 const ProjectNumberContainer = styled.div`
 	width: 25px;
 `;
 
-const ReadMoreContainer = styled.div`
-	display: flex;
-	gap: 5px;
-	align-items: center;
+const ProjectNumber = styled.div`
+	margin: 0;
+	font-family: 'NewYork';
+	font-size: 18px;
 `;
 
 const ProjectName = styled.h4`
@@ -134,6 +130,12 @@ const ProjectName = styled.h4`
 	font-family: 'NewYork';
 	font-weight: 400;
 	font-size: 18px;
+`;
+
+const ReadMoreContainer = styled.div`
+	display: flex;
+	gap: 5px;
+	align-items: center;
 `;
 
 const ReadMoreText = styled.p`

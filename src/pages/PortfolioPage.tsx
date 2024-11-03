@@ -29,6 +29,7 @@ const PortfolioPageStyling = styled.div`
 const MainContent = styled.main`
 	display: flex;
 	flex-direction: column;
+    align-items: center;
 	flex: 1;
 `;
 
