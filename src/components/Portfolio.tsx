@@ -47,13 +47,17 @@ const BigContainer = styled.div`
 	height: 100%;
 	width: 85%;
 	padding: 20px;
-	max-width: 1200px;
+	max-width: 1000px;
 `;
 
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
+
+	@media ${media.desktop} {
+		gap: 20px;
+	}
 `;
 
 const Title = styled.h1`
@@ -64,15 +68,11 @@ const Title = styled.h1`
 	margin-bottom: 5px;
 	margin: 0;
 
-	@media ${media.mobile} {
+	@media ${media.tablet} {
 		font-size: 70px;
 	}
 
-	@media ${media.tablet} {
-		font-size: 80px;
-	}
-
-	@media ${media.desktopXL} {
+	@media ${media.desktop} {
 		font-size: 90px;
 	}
 `;
@@ -80,13 +80,24 @@ const Title = styled.h1`
 const InfoText = styled.p`
 	font-family: 'Montserrat';
 	font-size: 11px;
-`;
 
+	@media ${media.tablet} {
+		font-size: 14px;
+	}
+
+	@media ${media.desktop} {
+		font-size: 18px;
+	}
+`;
 
 const ProjectsBigContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+
+	@media ${media.desktop} {
+		gap: 30px;
+	}
 `;
 
 const ProjectsContainer = styled.div`
@@ -98,6 +109,10 @@ const ProjectsContainer = styled.div`
 const StyledLink = styled(Link)`
 	text-decoration: none;
 	color: black;
+
+	@media ${media.desktop} {
+		margin-bottom: 10px;
+	}
 `;
 
 const ProjectList = styled.div`
@@ -113,16 +128,28 @@ const ProjectList = styled.div`
 const NumberAndTitleContainer = styled.div`
 	display: flex;
 	gap: 5px;
+
+	@media ${media.tablet} {
+		gap: 20px;
+	}
 `;
 
 const ProjectNumberContainer = styled.div`
 	width: 25px;
 `;
 
-const ProjectNumber = styled.div`
+const ProjectNumber = styled.p`
 	margin: 0;
 	font-family: 'NewYork';
 	font-size: 18px;
+
+	@media ${media.tablet} {
+		font-size: 24px;
+	}
+
+	@media ${media.desktop} {
+		font-size: 28px;
+	}
 `;
 
 const ProjectName = styled.h4`
@@ -130,6 +157,14 @@ const ProjectName = styled.h4`
 	font-family: 'NewYork';
 	font-weight: 400;
 	font-size: 18px;
+
+	@media ${media.tablet} {
+		font-size: 24px;
+	}
+
+	@media ${media.desktop} {
+		font-size: 28px;
+	}
 `;
 
 const ReadMoreContainer = styled.div`
@@ -142,11 +177,29 @@ const ReadMoreText = styled.p`
 	margin: 0;
 	font-family: 'Montserrat';
 	font-size: 9px;
+
+	@media ${media.tablet} {
+		font-size: 12px;
+	}
+
+	@media ${media.desktop} {
+		font-size: 16px;
+	}
 `;
 
 const Arrow = styled.img`
 	width: 18px;
 	height: 6px;
+
+	@media ${media.tablet} {
+		width: 20px;
+		height: 7px;
+	}
+
+	@media ${media.desktop} {
+		width: 35px;
+		height: 12px;
+	}
 `;
 
 const Line = styled.div`
