@@ -7,7 +7,7 @@ function Header() {
 
     const headerLinks = [
         { text: 'About', href: 'about'},
-        { text: 'Portoflio', href: 'portfolio'},
+        { text: 'Portfolio', href: 'portfolio'},
         { text: 'CV', href: 'cv'},
         { text: 'Contact', href: 'contact'}
     ]
