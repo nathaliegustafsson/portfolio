@@ -39,7 +39,11 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 0;
+    padding: 10px 0;
+
+    @media ${media.mobile} {
+        padding: 15px 0;
+    }
 `;
 
 const IconContainer = styled.div`
@@ -53,7 +57,7 @@ const IconContainer = styled.div`
 `;
 
 const Icon = styled.img`
-    height: 25px;
+    height: 24px;
     cursor: pointer;
 
     &:hover {
