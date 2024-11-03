@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { projects } from '../data/projectsData';
 import { media } from '../styles/breakpoints';
 
 function Portfolio() {
@@ -10,27 +11,31 @@ function Portfolio() {
 					<InfoText>Here's some projects I've done so far.</InfoText>
 				</div>
 				<ProjectsContainer>
-					<ProjectList>
-						<div style={{ display: 'flex', gap: '5px' }}>
-							<div>
-								<ProjectNumber>01.</ProjectNumber>
-							</div>
-							<div>
-								<ProjectName>Bumpy Monster</ProjectName>
-							</div>
+					{projects.map((project) => (
+						<div>
+							<ProjectList>
+								<div style={{ display: 'flex', gap: '5px' }}>
+									<div>
+										<ProjectNumber>{project.number}.</ProjectNumber>
+									</div>
+									<div>
+										<ProjectName>{project.title}</ProjectName>
+									</div>
+								</div>
+								<div
+									style={{
+										display: 'flex',
+										gap: '5px',
+										alignItems: 'center',
+									}}
+								>
+									<ReadMoreLink>Read More</ReadMoreLink>
+									<Arrow src="/Arrow.png" alt="" />
+								</div>
+							</ProjectList>
+							<Line />
 						</div>
-						<div
-							style={{
-								display: 'flex',
-								gap: '5px',
-								alignItems: 'center',
-							}}
-						>
-							<ReadMoreLink>Read More</ReadMoreLink>
-							<Arrow src="/Arrow.png" alt="" />
-						</div>
-					</ProjectList>
-					<Line />
+					))}
 				</ProjectsContainer>
 			</Container>
 		</BigContainer>
@@ -87,11 +92,11 @@ const ProjectsContainer = styled.div`
 const ProjectList = styled.div`
 	display: flex;
 	justify-content: space-between;
-	
+
 	&:hover {
 		font-style: italic;
 		cursor: pointer;
-	}	
+	}
 `;
 
 const ProjectNumber = styled.div`
