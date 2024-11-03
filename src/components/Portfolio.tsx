@@ -10,33 +10,27 @@ function Portfolio() {
 					<Title>Portfolio</Title>
 					<InfoText>Here's some projects I've done so far.</InfoText>
 				</div>
-				<ProjectsContainer>
+				<ProjectsBigContainer>
 					{projects.map((project) => (
-						<div>
+						<ProjectsContainer>
 							<ProjectList>
-								<div style={{ display: 'flex', gap: '5px' }}>
-									<div>
+								<NumberAndTitleContainer>
+									<ProjectNumberContainer>
 										<ProjectNumber>{project.number}.</ProjectNumber>
-									</div>
+									</ProjectNumberContainer>
 									<div>
 										<ProjectName>{project.title}</ProjectName>
 									</div>
-								</div>
-								<div
-									style={{
-										display: 'flex',
-										gap: '5px',
-										alignItems: 'center',
-									}}
-								>
-									<ReadMoreLink>Read More</ReadMoreLink>
-									<Arrow src="/Arrow.png" alt="" />
-								</div>
+								</NumberAndTitleContainer>
+								<ReadMoreContainer>
+									<ReadMoreText>Read more</ReadMoreText>
+									<Arrow src="/Arrow.png" alt="arrow-image" />
+								</ReadMoreContainer>
 							</ProjectList>
 							<Line />
-						</div>
+						</ProjectsContainer>
 					))}
-				</ProjectsContainer>
+				</ProjectsBigContainer>
 			</Container>
 		</BigContainer>
 	);
@@ -46,12 +40,19 @@ function Portfolio() {
 const BigContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	margin-top: 20px;
 	height: 100%;
 	width: auto;
 	padding: 20px;
 `;
 
 const Container = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+`;
+
+const ProjectsBigContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -80,12 +81,17 @@ const Title = styled.h1`
 
 const InfoText = styled.p`
 	font-family: 'Montserrat';
-	font-size: 12px;
+	font-size: 10px;
 `;
 
 const ProjectsContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	gap: 5px;
+`;
+
+const NumberAndTitleContainer = styled.div`
+	display: flex;
 	gap: 5px;
 `;
 
@@ -102,25 +108,35 @@ const ProjectList = styled.div`
 const ProjectNumber = styled.div`
 	margin: 0;
 	font-family: 'NewYork';
-	font-size: 20px;
+	font-size: 18px;
+`;
+
+const ProjectNumberContainer = styled.div`
+	width: 25px;
+`;
+
+const ReadMoreContainer = styled.div`
+	display: flex;
+	gap: 5px;
+	align-items: center;
 `;
 
 const ProjectName = styled.h4`
 	margin: 0;
 	font-family: 'NewYork';
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 18px;
 `;
 
-const ReadMoreLink = styled.p`
+const ReadMoreText = styled.p`
 	margin: 0;
 	font-family: 'Montserrat';
-	font-size: 12px;
+	font-size: 9px;
 `;
 
 const Arrow = styled.img`
-	width: 30px;
-	height: 10px;
+	width: 18px;
+	height: 6px;
 `;
 
 const Line = styled.div`
