@@ -57,7 +57,7 @@ const BigContainer = styled.div`
 
 const Container = styled.div`
 	width: 100%;
-	max-width: 1400px;
+	max-width: 1200px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -71,8 +71,8 @@ const LogoLink = styled.a`
 const LogoImg = styled.img`
 	height: 40px;
 
-	@media ${media.mobile} {
-		height: 50px;
+	@media ${media.tablet} {
+		height: 45px;
 	}
 
 	@media ${media.desktopXL} {
@@ -86,7 +86,7 @@ const LinksContainer = styled.div`
 	width: auto;
 	gap: 40px;
 
-	@media ${media.mobile} {
+	@media ${media.tablet} {
 		display: flex;
 	}
 `;
@@ -103,13 +103,21 @@ const HeaderLink = styled.a`
 		text-decoration-thickness: 0.01rem;
 		text-underline-offset: 0.3rem;
 	}
+
+	@media ${media.tablet} {
+		font-size: 16px;
+	}
+
+	@media ${media.desktop} {
+		font-size: 18px;
+	}
 `;
 
 const HamburgerIcon = styled.img`
 	display: flex;
 	width: 20px;
 
-	@media ${media.mobile} {
+	@media ${media.tablet} {
 		display: none;
 	}
 `;

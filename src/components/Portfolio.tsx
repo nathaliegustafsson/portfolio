@@ -53,10 +53,14 @@ const BigContainer = styled.div`
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 40px;
+	gap: 30px;
 
 	@media ${media.desktop} {
-		gap: 20px;
+		gap: 40px;
+	}
+
+	@media ${media.desktopXL} {
+		gap: 50px;
 	}
 `;
 
@@ -73,6 +77,10 @@ const Title = styled.h1`
 	}
 
 	@media ${media.desktop} {
+		font-size: 70px;
+	}
+
+	@media ${media.desktopXL} {
 		font-size: 90px;
 	}
 `;
@@ -80,6 +88,7 @@ const Title = styled.h1`
 const InfoText = styled.p`
 	font-family: 'Montserrat';
 	font-size: 11px;
+	margin-top: 5px;
 
 	@media ${media.tablet} {
 		font-size: 14px;
