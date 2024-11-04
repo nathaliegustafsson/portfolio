@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { media } from '../styles/breakpoints';
 
@@ -7,10 +8,12 @@ function Projects() {
 			<Container>
 				<TitleContainer>
 					<Title>Portfolio</Title>
-					<GoBackContainer>
-						<Arrow src="/arrow-left.png" alt="arrow-left" />
-						<GoBackText>Go back</GoBackText>
-					</GoBackContainer>
+					<StyledLink to={`/portfolio`}>
+						<GoBackContainer>
+							<Arrow src="/arrow-left.png" alt="arrow-left" />
+							<GoBackText>Go back</GoBackText>
+						</GoBackContainer>
+					</StyledLink>
 				</TitleContainer>
 				<ProjectsMainContent>
 					<ProjectNameBigContainer>
@@ -38,11 +41,23 @@ function Projects() {
 								can collect power-ups.
 							</DescriptionText>
 							<UrlContainer>
-								<UrlTitle>URL</UrlTitle>
+								<SectionTitle>URL</SectionTitle>
 								<UrlLink href="https://bumpythegame.netlify.app">
 									https://bumpythegame.netlify.app
 								</UrlLink>
 							</UrlContainer>
+							<TechnologiesContainer>
+								<SectionTitle>TECHNOLOGIES</SectionTitle>
+								<TechnologiesText>TypeScript, OOP & P5.js.</TechnologiesText>
+							</TechnologiesContainer>
+							<CollaboratorsContainer>
+								<SectionTitle>COLLABORATORS</SectionTitle>
+								<CollaboratorName>Moa Hedendahl</CollaboratorName>
+								<CollaboratorName>Lisa Marie Andersson</CollaboratorName>
+								<CollaboratorName>Sebastian Johansson</CollaboratorName>
+								<CollaboratorName>Emil Helgesson</CollaboratorName>
+								<CollaboratorName>Gabriel Lugo Mendez</CollaboratorName>
+							</CollaboratorsContainer>
 						</TextContainer>
 					</ProjectMainContent>
 				</ProjectsMainContent>
@@ -146,6 +161,11 @@ const Arrow = styled.img`
 	}
 `;
 
+const StyledLink = styled(Link)`
+	text-decoration: none;
+	color: black;
+`;
+
 const ProjectsMainContent = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -244,14 +264,15 @@ const UrlContainer = styled.div`
 	gap: 10px;
 `;
 
-const UrlTitle = styled.h6`
+const SectionTitle = styled.h6`
+	margin: 0;
 	font-family: 'Montserrat';
 	font-size: 12px;
 	font-weight: 600;
+	letter-spacing: 0.1rem;
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
 	text-underline-offset: 0.3rem;
-	margin: 0;
 `;
 
 const UrlLink = styled.a`
@@ -265,6 +286,30 @@ const UrlLink = styled.a`
 		text-decoration-thickness: 1px;
 		text-underline-offset: 0.2rem;
 	}
+`;
+
+const TechnologiesContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+`;
+
+const TechnologiesText = styled.p`
+	margin: 0;
+	font-family: 'Montserrat';
+	font-size: 10px;
+`;
+
+const CollaboratorName = styled.p`
+	margin: 0;
+	font-family: 'Montserrat';
+	font-size: 10px;
+`;
+
+const CollaboratorsContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 `;
 
 export default Projects;
