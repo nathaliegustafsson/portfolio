@@ -12,17 +12,40 @@ function Projects() {
 						<GoBackText>Go back</GoBackText>
 					</GoBackContainer>
 				</TitleContainer>
-				<ProjectsBigContainer>
-					<NumberAndTitleContainer>
-						<ProjectNumberContainer>
-							<ProjectNumber>01.</ProjectNumber>
-						</ProjectNumberContainer>
-						<div>
-							<ProjectName>Bumpy Monster</ProjectName>
-						</div>
-					</NumberAndTitleContainer>
-					<Line />
-				</ProjectsBigContainer>
+				<ProjectsMainContent>
+					<ProjectNameBigContainer>
+						<NumberAndTitleContainer>
+							<ProjectNumberContainer>
+								<ProjectNumber>01.</ProjectNumber>
+							</ProjectNumberContainer>
+							<div>
+								<ProjectName>Bumpy Monster</ProjectName>
+							</div>
+						</NumberAndTitleContainer>
+						<Line />
+					</ProjectNameBigContainer>
+					<ProjectMainContent>
+						<ImageContainer>
+							<ProjectImage src="/projectImages/bumpy1.png" alt="bumpy1" />
+							<ProjectImage src="/projectImages/bumpy2.png" alt="bumpy2" />
+						</ImageContainer>
+						<TextContainer>
+							<DescriptionText>
+								This is one of my favorite projects. Together with four other
+								students from my class, we created a game called “Bumpy
+								Monster.” It is a platform game where the goal is to reach as
+								high up as possible. Along the way, Bumpy encounters enemies and
+								can collect power-ups.
+							</DescriptionText>
+							<UrlContainer>
+								<UrlTitle>URL</UrlTitle>
+								<UrlLink href="https://bumpythegame.netlify.app">
+									https://bumpythegame.netlify.app
+								</UrlLink>
+							</UrlContainer>
+						</TextContainer>
+					</ProjectMainContent>
+				</ProjectsMainContent>
 			</Container>
 		</BigContainer>
 	);
@@ -123,7 +146,13 @@ const Arrow = styled.img`
 	}
 `;
 
-const ProjectsBigContainer = styled.div`
+const ProjectsMainContent = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+`;
+
+const ProjectNameBigContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
@@ -179,6 +208,63 @@ const Line = styled.div`
 	background-color: black;
 	width: 100%;
 	height: 1px;
+`;
+
+const ProjectMainContent = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+`;
+
+const ImageContainer = styled.div`
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+`;
+
+const ProjectImage = styled.img`
+	max-width: 47%;
+`;
+
+const TextContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+`;
+
+const DescriptionText = styled.p`
+	margin: 0;
+	font-family: 'Montserrat';
+	font-size: 10px;
+`;
+
+const UrlContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+`;
+
+const UrlTitle = styled.h6`
+	font-family: 'Montserrat';
+	font-size: 12px;
+	font-weight: 600;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.3rem;
+	margin: 0;
+`;
+
+const UrlLink = styled.a`
+	font-family: 'Montserrat';
+	font-size: 10px;
+	text-decoration: none;
+	color: black;
+
+	&:hover {
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.2rem;
+	}
 `;
 
 export default Projects;
