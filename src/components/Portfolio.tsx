@@ -26,7 +26,7 @@ function Portfolio() {
 									</NumberAndTitleContainer>
 									<ReadMoreContainer>
 										<ReadMoreText>Read more</ReadMoreText>
-										<Arrow src="/Arrow.png" alt="arrow-image" />
+										<Arrow src="/arrow-right.png" alt="arrow-image" />
 									</ReadMoreContainer>
 								</ProjectList>
 							</StyledLink>
