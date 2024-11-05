@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { media } from '../styles/breakpoints';
 
@@ -6,10 +7,10 @@ function Header() {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 
 	const headerLinks = [
-		{ text: 'About', href: 'about' },
-		{ text: 'Portfolio', href: 'portfolio' },
-		{ text: 'CV', href: 'cv' },
-		{ text: 'Contact', href: 'contact' },
+		{ text: 'About', href: '/about' },
+		{ text: 'Portfolio', href: '/portfolio' },
+		{ text: 'CV', href: '/cv' },
+		{ text: 'Contact', href: '/contact' },
 	];
 
 	const toggleMenu = () => {
@@ -19,12 +20,12 @@ function Header() {
 	return (
 		<BigContainer>
 			<Container>
-				<LogoLink href="/">
+				<LogoLink to="/">
 					<LogoImg src="/initials-logo.png" alt="initials-logo" />
 				</LogoLink>
 				<LinksContainer>
 					{headerLinks.map((link) => (
-						<HeaderLink key={link.text} href={link.href}>
+						<HeaderLink key={link.text} to={link.href}>
 							{link.text}
 						</HeaderLink>
 					))}
@@ -37,7 +38,7 @@ function Header() {
 				{isMenuOpen && (
 					<MobileMenu>
 						{headerLinks.map((link) => (
-							<HeaderLink key={link.text} href={link.href}>
+							<HeaderLink key={link.text} to={link.href}>
 								{link.text}
 							</HeaderLink>
 						))}
@@ -61,9 +62,13 @@ const Container = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@media ${media.desktopXL} {
+		max-width: 1400px;
+	}
 `;
 
-const LogoLink = styled.a`
+const LogoLink = styled(Link)`
 	display: flex;
 	align-items: center;
 `;
@@ -91,7 +96,7 @@ const LinksContainer = styled.div`
 	}
 `;
 
-const HeaderLink = styled.a`
+const HeaderLink = styled(Link)`
 	font-family: 'Montserrat';
 	font-size: 18px;
 	text-decoration: none;
