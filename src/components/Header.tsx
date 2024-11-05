@@ -112,10 +112,6 @@ const HeaderLink = styled(Link)`
 	@media ${media.tablet} {
 		font-size: 16px;
 	}
-
-	@media ${media.desktop} {
-		font-size: 18px;
-	}
 `;
 
 const HamburgerIcon = styled.img`
