@@ -75,6 +75,10 @@ const BigContainer = styled.div`
 	width: 85%;
 	padding: 20px;
 	max-width: 1000px;
+
+	@media ${media.desktopXL} {
+		max-width: 1200px;
+	}
 `;
 
 const Container = styled.div`
@@ -122,6 +126,10 @@ const GoBackContainer = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 5px;
+
+	@media ${media.tablet} {
+		gap: 10px;
+	}
 `;
 
 const GoBackText = styled.p`
@@ -138,11 +146,11 @@ const GoBackText = styled.p`
 	}
 
 	@media ${media.tablet} {
-		font-size: 14px;
+		font-size: 15px;
 	}
 
 	@media ${media.desktop} {
-		font-size: 18px;
+		font-size: 16px;
 	}
 `;
 
@@ -151,8 +159,8 @@ const Arrow = styled.img`
 	height: 6px;
 
 	@media ${media.tablet} {
-		width: 20px;
-		height: 7px;
+		width: 25px;
+		height: 8px;
 	}
 
 	@media ${media.desktop} {
@@ -178,7 +186,7 @@ const ProjectNameBigContainer = styled.div`
 	gap: 8px;
 
 	@media ${media.desktop} {
-		gap: 30px;
+		gap: 10px;
 	}
 `;
 
@@ -187,7 +195,7 @@ const NumberAndTitleContainer = styled.div`
 	gap: 5px;
 
 	@media ${media.tablet} {
-		gap: 20px;
+		gap: 15px;
 	}
 `;
 
@@ -234,12 +242,20 @@ const ProjectMainContent = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
+
+	@media ${media.desktop} {
+		flex-direction: row-reverse;
+	}
 `;
 
 const ImageContainer = styled.div`
 	display: flex;
 	gap: 20px;
 	justify-content: center;
+
+	@media ${media.desktop} {
+		justify-content: flex-end;
+	}
 `;
 
 const ProjectImage = styled.img`
@@ -250,18 +266,38 @@ const TextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
+
+	@media ${media.tablet} {
+		gap: 20px;
+	}
+
+	@media ${media.desktop} {
+		max-width: 350px;
+	}
+
+	@media ${media.desktopXL} {
+		max-width: 400px;
+	}
 `;
 
 const DescriptionText = styled.p`
 	margin: 0;
 	font-family: 'Montserrat';
 	font-size: 10px;
+
+	@media ${media.tablet} {
+		font-size: 14px;
+	}
 `;
 
 const UrlContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+
+	@media ${media.tablet} {
+		gap: 12px;
+	}
 `;
 
 const SectionTitle = styled.h6`
@@ -273,6 +309,12 @@ const SectionTitle = styled.h6`
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
 	text-underline-offset: 0.3rem;
+
+	@media ${media.tablet} {
+		font-size: 16px;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 0.4rem;
+	}
 `;
 
 const UrlLink = styled.a`
@@ -286,30 +328,50 @@ const UrlLink = styled.a`
 		text-decoration-thickness: 1px;
 		text-underline-offset: 0.2rem;
 	}
+
+	@media ${media.tablet} {
+		font-size: 14px;
+	}
 `;
 
 const TechnologiesContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+
+	@media ${media.tablet} {
+		gap: 12px;
+	}
 `;
 
 const TechnologiesText = styled.p`
 	margin: 0;
 	font-family: 'Montserrat';
 	font-size: 10px;
-`;
 
-const CollaboratorName = styled.p`
-	margin: 0;
-	font-family: 'Montserrat';
-	font-size: 10px;
+	@media ${media.tablet} {
+		font-size: 14px;
+	}
 `;
 
 const CollaboratorsContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+
+	@media ${media.tablet} {
+		gap: 12px;
+	}
+`;
+
+const CollaboratorName = styled.p`
+	margin: 0;
+	font-family: 'Montserrat';
+	font-size: 10px;
+
+	@media ${media.tablet} {
+		font-size: 14px;
+	}
 `;
 
 export default Projects;
