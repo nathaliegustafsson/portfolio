@@ -178,7 +178,7 @@ const ProjectName = styled.h4`
 
 const ReadMoreContainer = styled.div`
 	display: flex;
-	gap: 5px;
+	gap: 10px;
 	align-items: center;
 `;
 
