@@ -1,8 +1,19 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { projects } from '../data/projectsData';
 import { media } from '../styles/breakpoints';
+import { Project } from '../types/projectTypes';
 
 function Projects() {
+	const { projectId } = useParams<{ projectId: string }>();
+	const project = projects.find((p) => p.id === projectId) as
+		| Project
+		| undefined;
+
+	if (!project) {
+		return <div>Project wasn't found...</div>;
+	}
+
 	return (
 		<BigContainer>
 			<Container>
@@ -19,45 +30,53 @@ function Projects() {
 					<ProjectNameBigContainer>
 						<NumberAndTitleContainer>
 							<ProjectNumberContainer>
-								<ProjectNumber>01.</ProjectNumber>
+								<ProjectNumber>{project.number}.</ProjectNumber>
 							</ProjectNumberContainer>
 							<div>
-								<ProjectName>Bumpy Monster</ProjectName>
+								<ProjectName>{project.title}</ProjectName>
 							</div>
 						</NumberAndTitleContainer>
 						<Line />
 					</ProjectNameBigContainer>
 					<ProjectMainContent>
 						<ImageContainer>
-							<ProjectImage src="/projectImages/bumpy1.png" alt="bumpy1" />
-							<ProjectImage src="/projectImages/bumpy2.png" alt="bumpy2" />
+							<ProjectImage src={project.image1} alt="project-image1" />
+							<ProjectImage src={project.image2} alt="project-image2" />
 						</ImageContainer>
 						<TextContainer>
-							<DescriptionText>
-								This is one of my favorite projects. Together with four other
-								students from my class, we created a game called “Bumpy
-								Monster.” It is a platform game where the goal is to reach as
-								high up as possible. Along the way, Bumpy encounters enemies and
-								can collect power-ups.
-							</DescriptionText>
+							<DescriptionText>{project.description}</DescriptionText>
 							<UrlContainer>
 								<SectionTitle>URL</SectionTitle>
-								<UrlLink href="https://bumpythegame.netlify.app">
-									https://bumpythegame.netlify.app
+								<UrlLink
+									href={project.url}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{project.url}
 								</UrlLink>
 							</UrlContainer>
 							<TechnologiesContainer>
 								<SectionTitle>TECHNOLOGIES</SectionTitle>
-								<TechnologiesText>TypeScript, OOP & P5.js.</TechnologiesText>
+								<TechnologiesText>{project.technologies}</TechnologiesText>
 							</TechnologiesContainer>
-							<CollaboratorsContainer>
-								<SectionTitle>COLLABORATORS</SectionTitle>
-								<CollaboratorName>Moa Hedendahl</CollaboratorName>
-								<CollaboratorName>Lisa Marie Andersson</CollaboratorName>
-								<CollaboratorName>Sebastian Johansson</CollaboratorName>
-								<CollaboratorName>Emil Helgesson</CollaboratorName>
-								<CollaboratorName>Gabriel Lugo Mendez</CollaboratorName>
-							</CollaboratorsContainer>
+							{project.collaborators && project.collaborators.length > 0 && (
+								<CollaboratorsContainer>
+									<SectionTitle>COLLABORATORS</SectionTitle>
+									<CollaboratorList>
+										{project.collaborators?.map((collaborator, index) => (
+											<CollaboratorNameList key={index}>
+												<CollaboratorName
+													href={collaborator.githubUrl}
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													{collaborator.name}
+												</CollaboratorName>
+											</CollaboratorNameList>
+										))}
+									</CollaboratorList>
+								</CollaboratorsContainer>
+							)}
 						</TextContainer>
 					</ProjectMainContent>
 				</ProjectsMainContent>
@@ -178,6 +197,10 @@ const ProjectsMainContent = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+
+	@media ${media.desktop} {
+		gap: 30px;
+	}
 `;
 
 const ProjectNameBigContainer = styled.div`
@@ -276,7 +299,7 @@ const TextContainer = styled.div`
 	}
 
 	@media ${media.desktopXL} {
-		max-width: 400px;
+		max-width: 450px;
 	}
 `;
 
@@ -284,6 +307,7 @@ const DescriptionText = styled.p`
 	margin: 0;
 	font-family: 'Montserrat';
 	font-size: 10px;
+	line-height: 1.2rem;
 
 	@media ${media.tablet} {
 		font-size: 14px;
@@ -296,7 +320,7 @@ const UrlContainer = styled.div`
 	gap: 10px;
 
 	@media ${media.tablet} {
-		gap: 12px;
+		gap: 15px;
 	}
 `;
 
@@ -340,14 +364,21 @@ const TechnologiesContainer = styled.div`
 	gap: 10px;
 
 	@media ${media.tablet} {
-		gap: 12px;
+		gap: 15px;
 	}
 `;
 
-const TechnologiesText = styled.p`
-	margin: 0;
+const TechnologiesText = styled(DescriptionText)``;
+
+const CollaboratorName = styled.a`
+	text-decoration: none;
+	color: black;
 	font-family: 'Montserrat';
 	font-size: 10px;
+
+	&:hover {
+		font-weight: 600;
+	}
 
 	@media ${media.tablet} {
 		font-size: 14px;
@@ -360,18 +391,18 @@ const CollaboratorsContainer = styled.div`
 	gap: 10px;
 
 	@media ${media.tablet} {
-		gap: 12px;
+		gap: 15px;
 	}
 `;
 
-const CollaboratorName = styled.p`
-	margin: 0;
-	font-family: 'Montserrat';
-	font-size: 10px;
+const CollaboratorNameList = styled.li`
+	list-style: none;
+	margin-bottom: 10px;
+`;
 
-	@media ${media.tablet} {
-		font-size: 14px;
-	}
+const CollaboratorList = styled.ul`
+	margin: 0;
+	padding: 0;
 `;
 
 export default Projects;
