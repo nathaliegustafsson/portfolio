@@ -1,21 +1,38 @@
+import styled from 'styled-components';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 function ContactPage() {
 	return (
-		<div>
+		<ContactPageStyling>
 			<header>
 				<Header />
 			</header>
-			<main>
+			<MainContent>
 				<Contact />
-			</main>
+			</MainContent>
 			<footer>
 				<Footer />
 			</footer>
-		</div>
+		</ContactPageStyling>
 	);
 }
+
+// Styling
+const ContactPageStyling = styled.div`
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+`;
+
+const MainContent = styled.main`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	overflow-y: auto;
+	justify-content: center;
+`;
 
 export default ContactPage;
