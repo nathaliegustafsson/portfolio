@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { media } from '../styles/breakpoints';
+import { fonts } from '../styles/typography';
 
 function Header() {
 	const [isMenuOpen, setMenuOpen] = useState(false);
@@ -63,7 +64,6 @@ const BigContainer = styled.div`
 
 const Container = styled.div`
 	width: 100%;
-	max-width: 1200px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -102,7 +102,7 @@ const LinksContainer = styled.div`
 `;
 
 const HeaderLink = styled(Link)`
-	font-family: 'Montserrat', sans-serif;
+	font-family: ${fonts.montserrat};
 	font-size: 18px;
 	text-decoration: none;
 	color: black;

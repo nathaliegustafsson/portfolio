@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { media } from '../styles/breakpoints';
+import { fonts } from '../styles/typography';
 
 function About() {
 	const technologies = [
@@ -98,7 +99,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
 	display: inline-block;
-	font-family: 'NewYork', sans-serif;
+	font-family: ${fonts.newYork};
 	font-size: 55px;
 	font-weight: 100;
 	margin-bottom: 5px;
@@ -162,7 +163,7 @@ const AboutText = styled.div`
 
 const Text = styled.p`
 	margin: 0;
-	font-family: 'Montserrat', sans-serif;
+	font-family: ${fonts.montserrat};
 	font-size: 12px;
 
 	@media ${media.tablet} {
@@ -184,7 +185,7 @@ const TechnologyCategory = styled.h6`
 	margin: 0;
 	font-size: 12px;
 	font-weight: 600;
-	font-family: 'Montserrat', sans-serif;
+	font-family: ${fonts.montserrat};
 
 	@media ${media.tablet} {
 		font-size: 14px;
@@ -204,7 +205,7 @@ const TechnologiesContainer = styled.div`
 const TechnologyTools = styled.p`
 	margin: 0;
 	font-size: 12px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: ${fonts.montserrat};
 
 	@media ${media.tablet} {
 		font-size: 14px;

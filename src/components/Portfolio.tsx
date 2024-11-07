@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { projects } from '../data/projectsData';
 import { media } from '../styles/breakpoints';
+import { fonts } from '../styles/typography';
 
 function Portfolio() {
 	return (
@@ -66,7 +67,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
 	display: inline-block;
-	font-family: 'NewYork', sans-serif;
+	font-family: ${fonts.newYork};
 	font-size: 55px;
 	font-weight: 100;
 	margin-bottom: 5px;
@@ -86,7 +87,7 @@ const Title = styled.h1`
 `;
 
 const InfoText = styled.p`
-	font-family: 'Montserrat', sans-serif;
+	font-family: ${fonts.montserrat};
 	font-size: 11px;
 	margin-top: 5px;
 
@@ -149,7 +150,7 @@ const ProjectNumberContainer = styled.div`
 
 const ProjectNumber = styled.p`
 	margin: 0;
-	font-family: 'NewYork', sans-serif;
+	font-family: ${fonts.newYork};
 	font-size: 18px;
 
 	@media ${media.tablet} {
@@ -163,7 +164,7 @@ const ProjectNumber = styled.p`
 
 const ProjectName = styled.h4`
 	margin: 0;
-	font-family: 'NewYork', sans-serif;
+	font-family: ${fonts.newYork};
 	font-weight: 400;
 	font-size: 18px;
 
@@ -184,7 +185,7 @@ const ReadMoreContainer = styled.div`
 
 const ReadMoreText = styled.p`
 	margin: 0;
-	font-family: 'Montserrat', sans-serif;
+	font-family: ${fonts.montserrat};
 	font-size: 9px;
 
 	@media ${media.tablet} {

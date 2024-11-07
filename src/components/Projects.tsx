@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { projects } from '../data/projectsData';
 import { media } from '../styles/breakpoints';
+import { fonts } from '../styles/typography';
 import { Project } from '../types/projectTypes';
 
 function Projects() {
@@ -93,7 +94,10 @@ const BigContainer = styled.div`
 	height: 100%;
 	width: 85%;
 	padding: 20px;
-	max-width: 1000px;
+
+	@media ${media.desktop} {
+		max-width: 1100px;
+	}
 
 	@media ${media.desktopXL} {
 		max-width: 1200px;
@@ -122,7 +126,7 @@ const TitleContainer = styled.div`
 
 const Title = styled.h1`
 	display: inline-block;
-	font-family: 'NewYork', sans-serif;
+	font-family: ${fonts.newYork};
 	font-size: 55px;
 	font-weight: 100;
 	margin-bottom: 5px;
@@ -141,6 +145,11 @@ const Title = styled.h1`
 	}
 `;
 
+const StyledLink = styled(Link)`
+	text-decoration: none;
+	color: black;
+`;
+
 const GoBackContainer = styled.div`
 	display: flex;
 	align-items: center;
@@ -151,9 +160,24 @@ const GoBackContainer = styled.div`
 	}
 `;
 
+const Arrow = styled.img`
+	width: 22px;
+	height: 8px;
+
+	@media ${media.tablet} {
+		width: 25px;
+		height: 8px;
+	}
+
+	@media ${media.desktop} {
+		width: 35px;
+		height: 12px;
+	}
+`;
+
 const GoBackText = styled.p`
-	font-family: 'Montserrat', sans-serif;
-	font-size: 11px;
+	font-family: ${fonts.montserrat};
+	font-size: 12px;
 	font-weight: 400;
 	margin: 0px;
 	cursor: pointer;
@@ -171,26 +195,6 @@ const GoBackText = styled.p`
 	@media ${media.desktop} {
 		font-size: 16px;
 	}
-`;
-
-const Arrow = styled.img`
-	width: 20px;
-	height: 6px;
-
-	@media ${media.tablet} {
-		width: 25px;
-		height: 8px;
-	}
-
-	@media ${media.desktop} {
-		width: 35px;
-		height: 12px;
-	}
-`;
-
-const StyledLink = styled(Link)`
-	text-decoration: none;
-	color: black;
 `;
 
 const ProjectsMainContent = styled.div`
@@ -232,8 +236,8 @@ const ProjectNumberContainer = styled.div`
 
 const ProjectNumber = styled.p`
 	margin: 0;
-	font-family: 'NewYork', sans-serif;
-	font-size: 18px;
+	font-family: ${fonts.newYork};
+	font-size: 20px;
 
 	@media ${media.tablet} {
 		font-size: 24px;
@@ -246,9 +250,9 @@ const ProjectNumber = styled.p`
 
 const ProjectName = styled.h4`
 	margin: 0;
-	font-family: 'NewYork', sans-serif;
+	font-family: ${fonts.newYork};
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 20px;
 
 	@media ${media.tablet} {
 		font-size: 24px;
@@ -272,6 +276,7 @@ const ProjectMainContent = styled.div`
 
 	@media ${media.desktop} {
 		flex-direction: row-reverse;
+		justify-content: space-between;
 	}
 `;
 
@@ -310,8 +315,8 @@ const TextContainer = styled.div`
 
 const DescriptionText = styled.p`
 	margin: 0;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 10px;
+	font-family: ${fonts.montserrat};
+	font-size: 12px;
 	line-height: 1.2rem;
 
 	@media ${media.tablet} {
@@ -335,8 +340,8 @@ const UrlContainer = styled.div`
 
 const SectionTitle = styled.h6`
 	margin: 0;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 12px;
+	font-family: ${fonts.montserrat};
+	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 0.1rem;
 	text-decoration: underline;
@@ -355,8 +360,8 @@ const SectionTitle = styled.h6`
 `;
 
 const UrlLink = styled.a`
-	font-family: 'Montserrat', sans-serif;
-	font-size: 10px;
+	font-family: ${fonts.montserrat};
+	font-size: 12px;
 	text-decoration: none;
 	color: black;
 
@@ -388,8 +393,8 @@ const TechnologiesText = styled(DescriptionText)``;
 const CollaboratorName = styled.a`
 	text-decoration: none;
 	color: black;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 10px;
+	font-family: ${fonts.montserrat};
+	font-size: 12px;
 
 	&:hover {
 		font-weight: 600;
