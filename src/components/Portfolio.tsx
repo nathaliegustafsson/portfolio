@@ -77,7 +77,7 @@ const Title = styled.h1`
 	}
 
 	@media ${media.desktop} {
-		font-size: 70px;
+		font-size: 80px;
 	}
 
 	@media ${media.desktopXL} {

@@ -34,7 +34,7 @@ const MainContent = styled.main`
 	flex: 1;
 	overflow-y: auto;
 
-	@media ${media.desktop} {
+	@media ${media.tablet} {
 		justify-content: center;
 	}
 `;

@@ -133,7 +133,7 @@ const Title = styled.h1`
 	}
 
 	@media ${media.desktop} {
-		font-size: 70px;
+		font-size: 80px;
 	}
 
 	@media ${media.desktopXL} {
@@ -220,6 +220,10 @@ const NumberAndTitleContainer = styled.div`
 	@media ${media.tablet} {
 		gap: 15px;
 	}
+
+	@media ${media.desktop} {
+		gap: 25px;
+	}
 `;
 
 const ProjectNumberContainer = styled.div`
@@ -236,7 +240,7 @@ const ProjectNumber = styled.p`
 	}
 
 	@media ${media.desktop} {
-		font-size: 28px;
+		font-size: 30px;
 	}
 `;
 
@@ -251,7 +255,7 @@ const ProjectName = styled.h4`
 	}
 
 	@media ${media.desktop} {
-		font-size: 28px;
+		font-size: 30px;
 	}
 `;
 
@@ -283,6 +287,7 @@ const ImageContainer = styled.div`
 
 const ProjectImage = styled.img`
 	max-width: 47%;
+	height: 90%;
 `;
 
 const TextContainer = styled.div`
@@ -312,6 +317,10 @@ const DescriptionText = styled.p`
 	@media ${media.tablet} {
 		font-size: 14px;
 	}
+
+	@media ${media.desktop} {
+		font-size: 15px;
+	}
 `;
 
 const UrlContainer = styled.div`
@@ -339,6 +348,11 @@ const SectionTitle = styled.h6`
 		text-decoration-thickness: 2px;
 		text-underline-offset: 0.4rem;
 	}
+
+	@media ${media.desktop} {
+		font-size: 17px;
+	}
+	
 `;
 
 const UrlLink = styled.a`
@@ -355,6 +369,10 @@ const UrlLink = styled.a`
 
 	@media ${media.tablet} {
 		font-size: 14px;
+	}
+
+	@media ${media.desktop} {
+		font-size: 15px;
 	}
 `;
 
@@ -382,6 +400,10 @@ const CollaboratorName = styled.a`
 
 	@media ${media.tablet} {
 		font-size: 14px;
+	}
+
+	@media ${media.desktop} {
+		font-size: 15px;
 	}
 `;
 
