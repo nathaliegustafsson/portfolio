@@ -5,12 +5,12 @@ function Footer() {
 	const footerLinks = [
 		{
 			href: 'https://github.com/nathaliegustafsson',
-			src: '/github-icon.svg',
+			src: '/icons/github-icon.svg',
 			alt: 'github-icon',
 		},
 		{
 			href: 'https://www.linkedin.com/in/nathalie-gustafsson-5393b415a/',
-			src: '/linkedin-icon.svg',
+			src: '/icons/linkedin-icon.svg',
 			alt: 'linkedin-icon',
 		},
 	];

@@ -32,7 +32,7 @@ function Header() {
 					))}
 				</LinksContainer>
 				<HamburgerIcon
-					src="/hamburger-icon.svg"
+					src="/icons/hamburger-icon.svg"
 					alt="hamburger-icon"
 					onClick={toggleMenu}
 				/>
