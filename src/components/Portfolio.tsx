@@ -86,7 +86,7 @@ const Title = styled.h1`
 `;
 
 const InfoText = styled.p`
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;;
 	font-size: 11px;
 	margin-top: 5px;
 
@@ -184,7 +184,7 @@ const ReadMoreContainer = styled.div`
 
 const ReadMoreText = styled.p`
 	margin: 0;
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;;
 	font-size: 9px;
 
 	@media ${media.tablet} {

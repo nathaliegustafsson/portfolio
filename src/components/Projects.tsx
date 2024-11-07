@@ -152,7 +152,7 @@ const GoBackContainer = styled.div`
 `;
 
 const GoBackText = styled.p`
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 11px;
 	font-weight: 400;
 	margin: 0px;
@@ -310,7 +310,7 @@ const TextContainer = styled.div`
 
 const DescriptionText = styled.p`
 	margin: 0;
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 10px;
 	line-height: 1.2rem;
 
@@ -335,7 +335,7 @@ const UrlContainer = styled.div`
 
 const SectionTitle = styled.h6`
 	margin: 0;
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: 0.1rem;
@@ -352,11 +352,10 @@ const SectionTitle = styled.h6`
 	@media ${media.desktop} {
 		font-size: 17px;
 	}
-	
 `;
 
 const UrlLink = styled.a`
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 10px;
 	text-decoration: none;
 	color: black;
@@ -389,7 +388,7 @@ const TechnologiesText = styled(DescriptionText)``;
 const CollaboratorName = styled.a`
 	text-decoration: none;
 	color: black;
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 10px;
 
 	&:hover {

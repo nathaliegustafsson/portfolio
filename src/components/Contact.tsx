@@ -77,7 +77,7 @@ const Title = styled.h1`
 `;
 
 const InfoText = styled.p`
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;;
 	font-size: 11px;
 	margin-top: 5px;
 
@@ -102,7 +102,7 @@ const ContactContainer = styled.div`
 
 const Link = styled.a`
 	margin: 0;
-	font-family: 'Montserrat';
+	font-family: 'Montserrat, sans-serif;';
 	font-size: 10px;
 	line-height: 1.2rem;
 	color: black;
@@ -125,7 +125,7 @@ const Link = styled.a`
 
 const ContactTitle = styled.h6`
 	margin: 0;
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;;
 	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: 0.1rem;

@@ -92,7 +92,7 @@ const Line = styled.div`
 `;
 
 const RoleTitle = styled.h3`
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;;
 	font-size: 18px;
 	font-weight: 400;
 	margin: 0px;
@@ -107,7 +107,7 @@ const RoleTitle = styled.h3`
 `;
 
 const ShortText = styled.h6`
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;;
 	font-size: 12px;
 	font-weight: 300;
 	margin-top: 10px;
