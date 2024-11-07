@@ -84,6 +84,7 @@ const BigContainer = styled.div`
 	width: 85%;
 	padding: 20px;
 	max-width: 1000px;
+	margin-bottom: 10px;
 `;
 
 const Container = styled.div`
@@ -164,11 +165,7 @@ const AboutText = styled.div`
 const Text = styled.p`
 	margin: 0;
 	font-family: ${fonts.montserrat};
-	font-size: 13px;
-
-	@media ${media.tablet} {
-		font-size: 14px;
-	}
+	font-size: 14px;
 
 	@media ${media.desktop} {
 		font-size: 16px;
@@ -183,13 +180,9 @@ const TechnologiesBox = styled.div`
 
 const TechnologyCategory = styled.h6`
 	margin: 0;
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 600;
 	font-family: ${fonts.montserrat};
-
-	@media ${media.tablet} {
-		font-size: 14px;
-	}
 
 	@media ${media.desktop} {
 		font-size: 16px;
@@ -204,12 +197,8 @@ const TechnologiesContainer = styled.div`
 
 const TechnologyTools = styled.p`
 	margin: 0;
-	font-size: 13px;
+	font-size: 14px;
 	font-family: ${fonts.montserrat};
-
-	@media ${media.tablet} {
-		font-size: 14px;
-	}
 
 	@media ${media.desktop} {
 		font-size: 16px;
@@ -228,11 +217,6 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
 	width: 100%;
-
-	@media ${media.tablet} {
-		/* height: 65%; */
-		object-fit: contain;
-	}
 `;
 
 export default About;

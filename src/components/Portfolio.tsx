@@ -88,7 +88,7 @@ const Title = styled.h1`
 
 const InfoText = styled.p`
 	font-family: ${fonts.montserrat};
-	font-size: 12px;
+	font-size: 14px;
 	margin-top: 5px;
 
 	@media ${media.tablet} {
@@ -137,7 +137,7 @@ const ProjectList = styled.div`
 
 const NumberAndTitleContainer = styled.div`
 	display: flex;
-	gap: 5px;
+	gap: 10px;
 
 	@media ${media.tablet} {
 		gap: 20px;
@@ -151,7 +151,7 @@ const ProjectNumberContainer = styled.div`
 const ProjectNumber = styled.p`
 	margin: 0;
 	font-family: 'NewYork', sans-serif;
-	font-size: 20px;
+	font-size: 22px;
 
 	@media ${media.tablet} {
 		font-size: 24px;
@@ -166,7 +166,7 @@ const ProjectName = styled.h4`
 	margin: 0;
 	font-family: 'NewYork', sans-serif;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 22px;
 
 	@media ${media.tablet} {
 		font-size: 24px;
@@ -190,9 +190,10 @@ const ReadMoreContainer = styled.div`
 const ReadMoreText = styled.p`
 	margin: 0;
 	font-family: ${fonts.montserrat};
-	font-size: 10px;
+	display: none;
 
 	@media ${media.tablet} {
+		display: block;
 		font-size: 12px;
 	}
 
@@ -202,13 +203,8 @@ const ReadMoreText = styled.p`
 `;
 
 const Arrow = styled.img`
-	width: 15px;
-	height: 5px;
-
-	@media ${media.tablet} {
-		width: 20px;
-		height: 7px;
-	}
+	width: 20px;
+	height: 7px;
 
 	@media ${media.desktop} {
 		width: 35px;
