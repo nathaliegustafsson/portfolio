@@ -2,33 +2,73 @@ import styled from 'styled-components';
 import { media } from '../styles/breakpoints';
 
 function About() {
+	const technologies = [
+		{
+			category: 'Languages and Frameworks:',
+			tools: ['JavaScript, TypeScript, React, Vue, Node.js'],
+		},
+		{
+			category: 'Design Tools:',
+			tools: ['Figma'],
+		},
+		{
+			category: 'Web Development:',
+			tools: ['HTML, CSS, SCSS, Styled Components'],
+		},
+		{
+			category: 'Version Control:',
+			tools: ['Git, Github, Bitbucket'],
+		},
+		{
+			category: 'Other Technologies:',
+			tools: [
+				'React-Native, Redux, Firebase, MongoDB, BigCommerce, Stencil, Jest ',
+			],
+		},
+	];
+
 	return (
 		<BigContainer>
 			<Container>
-				<div>
-					<Title>About</Title>
-					<InfoText>
-						My name is Nathalie, and I'm a recently graduated Front End
-						Developer from Medieinstitutet in Gothenburg. I have a passion for
-						creating user-friendly and visually appealing web solutions, and I'm
-						driven by the opportunity to combine technology and design to
-						deliver the best possible user experiences. Before transitioning
-						into tech, I worked in various roles, including as a team leader and
-						in customer service.I also gained experience as a Front End
-						Developer at a start-up, where I had the chance to work in a dynamic
-						environment, which strengthened my problem-solving skills and my
-						ability to collaborate effectively. I'm passionate about front end
-						development and UX/UI design, and I've developed skills in a variety
-						of technologies and tools, including: Languages and frameworks:
-						JavaScript, TypeScript, React, Vue, Node.js Design tools: Figma Web
-						development: HTML, CSS, SCSS Version control: Git, GitHub, Bitbucket
-						Other technologies: Redux, Firebase, MongoDB, BigCommerce, React
-						Native, Stencil, Jest. I'm excited to continue growing in the field
-						and contribute to developing smart, creative, and functional
-						solutions that make a difference.
-					</InfoText>
-				</div>
-				<div></div>
+				<Title>About</Title>
+				<AboutContent>
+					<ImageContainer>
+						<Image src="/cv-picture.jpg" alt="cv-picture" />
+					</ImageContainer>
+					<TextContainer>
+						<AboutText>
+							<Text>
+								Hi! My name is Nathalie, and I'm a recent graduate in Front-End
+								Development from Medieinstitutet in Gothenburg. I chose to
+								pursue this field because of the variety and creativity it
+								offers, as well as the constant opportunities to grow and learn.
+								I'm passionate about combining technology and design to deliver
+								the best possible user experiences.
+							</Text>
+							<Text>
+								Before transitioning to tech, I worked in retail for several
+								years which gave me valuable skills in communication,
+								adaptability, and teamwork.
+							</Text>
+						</AboutText>
+						<SkillsContainer>
+							<Text>
+								I've developed skills in a variety of technologies and tools,
+								including:
+							</Text>
+							<TechnologiesContainer>
+								{technologies.map((technology) => (
+									<TechnologiesBox key={technology.category}>
+										<TechnologyCategory>
+											{technology.category}
+										</TechnologyCategory>
+										<TechnologyTools>{technology.tools}</TechnologyTools>
+									</TechnologiesBox>
+								))}
+							</TechnologiesContainer>
+						</SkillsContainer>
+					</TextContainer>
+				</AboutContent>
 			</Container>
 		</BigContainer>
 	);
@@ -48,14 +88,11 @@ const BigContainer = styled.div`
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
+	gap: 10px;
+	justify-content: center;
 
 	@media ${media.desktop} {
-		gap: 40px;
-	}
-
-	@media ${media.desktopXL} {
-		gap: 50px;
+		gap: 20px;
 	}
 `;
 
@@ -72,7 +109,7 @@ const Title = styled.h1`
 	}
 
 	@media ${media.desktop} {
-		font-size: 70px;
+		font-size: 80px;
 	}
 
 	@media ${media.desktopXL} {
@@ -80,17 +117,118 @@ const Title = styled.h1`
 	}
 `;
 
-const InfoText = styled.p`
-	font-family: 'Montserrat';
-	font-size: 11px;
+const AboutContent = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+
+	@media ${media.tablet} {
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		gap: 20px;
+	}
+`;
+
+const TextContainer = styled.div`
 	margin-top: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	@media ${media.tablet} {
+		width: 50%;
+		line-height: 1.3rem;
+	}
+
+	@media ${media.desktop} {
+		line-height: 1.4rem;
+	}
+`;
+
+const SkillsContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+`;
+
+const AboutText = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+`;
+
+const Text = styled.p`
+	margin: 0;
+	font-family: 'Montserrat';
+	font-size: 12px;
 
 	@media ${media.tablet} {
 		font-size: 14px;
 	}
 
 	@media ${media.desktop} {
-		font-size: 18px;
+		font-size: 16px;
+	}
+`;
+
+const TechnologiesBox = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+`;
+
+const TechnologyCategory = styled.h6`
+	margin: 0;
+	font-size: 12px;
+	font-weight: 600;
+	font-family: 'Montserrat';
+
+	@media ${media.tablet} {
+		font-size: 14px;
+	}
+
+	@media ${media.desktop} {
+		font-size: 16px;
+	}
+`;
+
+const TechnologiesContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+`;
+
+const TechnologyTools = styled.p`
+	margin: 0;
+	font-size: 12px;
+	font-family: 'Montserrat';
+
+	@media ${media.tablet} {
+		font-size: 14px;
+	}
+
+	@media ${media.desktop} {
+		font-size: 16px;
+	}
+`;
+
+const ImageContainer = styled.div`
+	width: 100%;
+	display: flex;
+
+	@media ${media.tablet} {
+		width: 50%;
+		align-items: flex-start;
+	}
+`;
+
+const Image = styled.img`
+	width: 100%;
+
+	@media ${media.tablet} {
+		/* height: 65%; */
+		object-fit: contain;
 	}
 `;
 
