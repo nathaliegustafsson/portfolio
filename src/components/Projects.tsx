@@ -284,7 +284,6 @@ const ImageContainer = styled.div`
 
 const ProjectImage = styled.img`
 	max-width: 47%;
-	height: 90%;
 `;
 
 const TextContainer = styled.div`
