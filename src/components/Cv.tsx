@@ -7,19 +7,26 @@ function Cv() {
 			<Container>
 				<div>
 					<Title>CV</Title>
-					<InfoText>Here's my CV in both English and Swedish.</InfoText>
+					<InfoText>Here's my CV in both Swedish and English.</InfoText>
 				</div>
 				<ContactContainer>
 					<ContactTitle>SWEDISH</ContactTitle>
-					<Link href="CV-swe.pdf" target="_blank" rel="noopener noreferrer">
+					<Link
+						href="/cv-files/CV-swe.pdf"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						Open here
 					</Link>
 				</ContactContainer>
 				<ContactContainer>
 					<ContactTitle>ENGLISH</ContactTitle>
-					{/* <Link href="CV-swe.pdf" target="_blank" rel="noopener noreferrer"> */}
-					<Link>
-						Coming soon
+					<Link
+						href="/cv-files/CV-eng.pdf"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Open here
 					</Link>
 				</ContactContainer>
 			</Container>
