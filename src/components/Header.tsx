@@ -7,6 +7,7 @@ function Header() {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 
 	const headerLinks = [
+		{ text: 'Home', href: '/' },
 		{ text: 'About', href: '/about' },
 		{ text: 'Portfolio', href: '/portfolio' },
 		{ text: 'CV', href: '/cv' },
