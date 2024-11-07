@@ -10,13 +10,13 @@ function Contact() {
 					<InfoText>You can find me here.</InfoText>
 				</div>
 				<ContactContainer>
-					<SectionTitle>EMAIL</SectionTitle>
+					<ContactTitle>EMAIL</ContactTitle>
 					<Link href="mailto:nath.gustafsson@gmail.com">
 						nath.gustafsson@gmail.com
 					</Link>
 				</ContactContainer>
 				<ContactContainer>
-					<SectionTitle>GITHUB</SectionTitle>
+					<ContactTitle>GITHUB</ContactTitle>
 					<Link
 						href="https://github.com/nathaliegustafsson"
 						target="_blank"
@@ -123,7 +123,7 @@ const Link = styled.a`
 	}
 `;
 
-const SectionTitle = styled.h6`
+const ContactTitle = styled.h6`
 	margin: 0;
 	font-family: 'Montserrat';
 	font-size: 12px;

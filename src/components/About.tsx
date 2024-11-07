@@ -139,6 +139,8 @@ const TextContainer = styled.div`
 	@media ${media.tablet} {
 		width: 50%;
 		line-height: 1.3rem;
+		margin-top: 0;
+		gap: 15px;
 	}
 
 	@media ${media.desktop} {
@@ -149,13 +151,13 @@ const TextContainer = styled.div`
 const SkillsContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 15px;
 `;
 
 const AboutText = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 15px;
 `;
 
 const Text = styled.p`
