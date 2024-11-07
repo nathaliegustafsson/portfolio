@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { media } from '../styles/breakpoints';
@@ -6,6 +6,8 @@ import { fonts } from '../styles/typography';
 
 function Header() {
 	const [isMenuOpen, setMenuOpen] = useState(false);
+	const menuRef = useRef<HTMLDivElement | null>(null);
+	const hamburgerRef = useRef<HTMLImageElement>(null);
 
 	const headerLinks = [
 		{ text: 'Home', href: '/' },
@@ -16,8 +18,26 @@ function Header() {
 	];
 
 	const toggleMenu = () => {
-		setMenuOpen(!isMenuOpen);
+		setMenuOpen((prevState) => !prevState);
 	};
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				menuRef.current &&
+				!menuRef.current.contains(event.target as Node) &&
+				!hamburgerRef.current?.contains(event.target as Node)
+			) {
+				setMenuOpen(false);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside);
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, []);
 
 	return (
 		<BigContainer>
@@ -36,9 +56,10 @@ function Header() {
 					src="/icons/hamburger-icon.svg"
 					alt="hamburger-icon"
 					onClick={toggleMenu}
+					ref={hamburgerRef}
 				/>
 				{isMenuOpen && (
-					<MobileMenu>
+					<MobileMenu ref={menuRef}>
 						{headerLinks.map((link) => (
 							<HeaderLink key={link.text} to={link.href}>
 								{link.text}
