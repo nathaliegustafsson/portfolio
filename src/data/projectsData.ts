@@ -24,7 +24,7 @@ export const projects: Project[] = [
 			},
 			{ name: 'Emil Helgesson', githubUrl: 'https://github.com/Emil-Helge' },
 			{
-				name: 'Gabriel Lugo Mendez',
+				name: 'Gabriel Lugo Méndez',
 				githubUrl: 'https://github.com/gabriel-lugo',
 			},
 		],
