@@ -3,3 +3,8 @@ body {
 	background-color: #fff5ee;
 	margin: 0;
 }
+
+@font-face {
+    font-family: 'NewYork';
+    src: url(../assets/fonts/NewYork.woff2) format("woff2");
+}
