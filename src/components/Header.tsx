@@ -55,6 +55,10 @@ const BigContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	margin: 10px 15px 0 10px;
+
+	@media ${media.tablet} {
+		padding: 0 20px;
+	}
 `;
 
 const Container = styled.div`

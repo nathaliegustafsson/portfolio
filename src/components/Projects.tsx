@@ -362,9 +362,7 @@ const UrlLink = styled.a`
 	color: black;
 
 	&:hover {
-		text-decoration: underline;
-		text-decoration-thickness: 1px;
-		text-underline-offset: 0.2rem;
+		font-weight: 600;
 	}
 
 	@media ${media.tablet} {
