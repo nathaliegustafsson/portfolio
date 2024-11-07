@@ -66,7 +66,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
 	display: inline-block;
-	font-family: 'NewYork';
+	font-family: 'NewYork', sans-serif;
 	font-size: 55px;
 	font-weight: 100;
 	margin-bottom: 5px;
@@ -86,7 +86,7 @@ const Title = styled.h1`
 `;
 
 const InfoText = styled.p`
-	font-family: 'Montserrat', sans-serif;;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 11px;
 	margin-top: 5px;
 
@@ -149,7 +149,7 @@ const ProjectNumberContainer = styled.div`
 
 const ProjectNumber = styled.p`
 	margin: 0;
-	font-family: 'NewYork';
+	font-family: 'NewYork', sans-serif;
 	font-size: 18px;
 
 	@media ${media.tablet} {
@@ -163,7 +163,7 @@ const ProjectNumber = styled.p`
 
 const ProjectName = styled.h4`
 	margin: 0;
-	font-family: 'NewYork';
+	font-family: 'NewYork', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
 
@@ -184,7 +184,7 @@ const ReadMoreContainer = styled.div`
 
 const ReadMoreText = styled.p`
 	margin: 0;
-	font-family: 'Montserrat', sans-serif;;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 9px;
 
 	@media ${media.tablet} {

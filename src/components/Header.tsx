@@ -102,7 +102,7 @@ const LinksContainer = styled.div`
 `;
 
 const HeaderLink = styled(Link)`
-	font-family: 'Montserrat, sans-serif;';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	text-decoration: none;
 	color: black;

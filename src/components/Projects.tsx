@@ -122,7 +122,7 @@ const TitleContainer = styled.div`
 
 const Title = styled.h1`
 	display: inline-block;
-	font-family: 'NewYork';
+	font-family: 'NewYork', sans-serif;
 	font-size: 55px;
 	font-weight: 100;
 	margin-bottom: 5px;
@@ -232,7 +232,7 @@ const ProjectNumberContainer = styled.div`
 
 const ProjectNumber = styled.p`
 	margin: 0;
-	font-family: 'NewYork';
+	font-family: 'NewYork', sans-serif;
 	font-size: 18px;
 
 	@media ${media.tablet} {
@@ -246,7 +246,7 @@ const ProjectNumber = styled.p`
 
 const ProjectName = styled.h4`
 	margin: 0;
-	font-family: 'NewYork';
+	font-family: 'NewYork', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
 

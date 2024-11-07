@@ -61,7 +61,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
 	display: inline-block;
-	font-family: 'NewYork';
+	font-family: 'NewYork', sans-serif;
 	font-size: 55px;
 	font-weight: 100;
 	margin-bottom: 5px;
@@ -81,7 +81,7 @@ const Title = styled.h1`
 `;
 
 const InfoText = styled.p`
-	font-family: 'Montserrat', sans-serif;;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 11px;
 	margin-top: 5px;
 
@@ -129,7 +129,7 @@ const Link = styled.a`
 
 const ContactTitle = styled.h6`
 	margin: 0;
-	font-family: 'Montserrat', sans-serif;;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: 0.1rem;
