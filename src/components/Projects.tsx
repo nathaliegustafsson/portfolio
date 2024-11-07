@@ -177,7 +177,7 @@ const Arrow = styled.img`
 
 const GoBackText = styled.p`
 	font-family: ${fonts.montserrat};
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: 400;
 	margin: 0px;
 	cursor: pointer;
@@ -237,7 +237,7 @@ const ProjectNumberContainer = styled.div`
 const ProjectNumber = styled.p`
 	margin: 0;
 	font-family: 'NewYork', sans-serif;
-	font-size: 20px;
+	font-size: 22px;
 
 	@media ${media.tablet} {
 		font-size: 24px;
@@ -252,7 +252,7 @@ const ProjectName = styled.h4`
 	margin: 0;
 	font-family: 'NewYork', sans-serif;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 22px;
 
 	@media ${media.tablet} {
 		font-size: 24px;
@@ -316,7 +316,7 @@ const TextContainer = styled.div`
 const DescriptionText = styled.p`
 	margin: 0;
 	font-family: ${fonts.montserrat};
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 1.2rem;
 
 	@media ${media.tablet} {
@@ -345,7 +345,7 @@ const SectionTitle = styled.h6`
 	font-weight: 600;
 	letter-spacing: 0.1rem;
 	text-decoration: underline;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 2px;
 	text-underline-offset: 0.3rem;
 
 	@media ${media.tablet} {
@@ -361,7 +361,7 @@ const SectionTitle = styled.h6`
 
 const UrlLink = styled.a`
 	font-family: ${fonts.montserrat};
-	font-size: 12px;
+	font-size: 13px;
 	text-decoration: none;
 	color: black;
 
@@ -394,7 +394,7 @@ const CollaboratorName = styled.a`
 	text-decoration: none;
 	color: black;
 	font-family: ${fonts.montserrat};
-	font-size: 12px;
+	font-size: 13px;
 
 	&:hover {
 		font-weight: 600;

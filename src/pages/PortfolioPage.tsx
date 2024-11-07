@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Portfolio from '../components/Portfolio';
-import { media } from '../styles/breakpoints';
 
 function PortfolioPage() {
 	return (
@@ -33,10 +32,7 @@ const MainContent = styled.main`
 	align-items: center;
 	flex: 1;
 	overflow-y: auto;
-
-	@media ${media.tablet} {
-		justify-content: center;
-	}
+	justify-content: center;
 `;
 
 export default PortfolioPage;

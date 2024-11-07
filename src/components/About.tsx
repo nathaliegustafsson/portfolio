@@ -164,7 +164,7 @@ const AboutText = styled.div`
 const Text = styled.p`
 	margin: 0;
 	font-family: ${fonts.montserrat};
-	font-size: 12px;
+	font-size: 13px;
 
 	@media ${media.tablet} {
 		font-size: 14px;
@@ -183,7 +183,7 @@ const TechnologiesBox = styled.div`
 
 const TechnologyCategory = styled.h6`
 	margin: 0;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: 600;
 	font-family: ${fonts.montserrat};
 
@@ -204,7 +204,7 @@ const TechnologiesContainer = styled.div`
 
 const TechnologyTools = styled.p`
 	margin: 0;
-	font-size: 12px;
+	font-size: 13px;
 	font-family: ${fonts.montserrat};
 
 	@media ${media.tablet} {

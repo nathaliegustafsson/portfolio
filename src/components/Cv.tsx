@@ -11,23 +11,21 @@ function Cv() {
 					<InfoText>Here's my CV in both Swedish and English.</InfoText>
 				</div>
 				<ContactContainer>
-					<ContactTitle>SWEDISH</ContactTitle>
 					<Link
 						href="/cv-files/CV-swe.pdf"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Open here
+						<ContactTitle>SWEDISH</ContactTitle>
 					</Link>
 				</ContactContainer>
 				<ContactContainer>
-					<ContactTitle>ENGLISH</ContactTitle>
 					<Link
 						href="/cv-files/CV-eng.pdf"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Open here
+						<ContactTitle>ENGLISH</ContactTitle>
 					</Link>
 				</ContactContainer>
 			</Container>
@@ -83,7 +81,7 @@ const Title = styled.h1`
 
 const InfoText = styled.p`
 	font-family: ${fonts.montserrat};
-	font-size: 11px;
+	font-size: 13px;
 	margin-top: 5px;
 
 	@media ${media.tablet} {
@@ -108,8 +106,6 @@ const ContactContainer = styled.div`
 const Link = styled.a`
 	margin: 0;
 	font-family: ${fonts.montserrat};
-	font-size: 10px;
-	line-height: 1.2rem;
 	color: black;
 	text-decoration: none;
 
@@ -118,29 +114,20 @@ const Link = styled.a`
 		text-decoration-thickness: 0.01rem;
 		text-underline-offset: 0.3rem;
 	}
-
-	@media ${media.tablet} {
-		font-size: 14px;
-	}
-
-	@media ${media.desktop} {
-		font-size: 16px;
-	}
 `;
 
 const ContactTitle = styled.h6`
 	margin: 0;
 	font-family: ${fonts.montserrat};
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: 600;
 	letter-spacing: 0.1rem;
 	text-decoration: underline;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 2px;
 	text-underline-offset: 0.3rem;
 
 	@media ${media.tablet} {
 		font-size: 16px;
-		text-decoration-thickness: 2px;
 		text-underline-offset: 0.4rem;
 	}
 

@@ -40,7 +40,6 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 10px 0;
-	margin-top: 30px;
 
 	@media ${media.mobile} {
 		padding: 15px 0;

@@ -109,18 +109,14 @@ const RoleTitle = styled.h3`
 
 const ShortText = styled.h6`
 	font-family: ${fonts.montserrat};
-	font-size: 12px;
-	font-weight: 300;
+	font-size: 13px;
+	font-weight: 400;
 	margin-top: 10px;
 	margin-bottom: 0;
 	max-width: 700px;
 
-	@media ${media.mobile} {
-		font-size: 18px;
-	}
-
 	@media ${media.tablet} {
-		font-size: 20px;
+		font-size: 18px;
 	}
 
 	@media ${media.desktopXL} {

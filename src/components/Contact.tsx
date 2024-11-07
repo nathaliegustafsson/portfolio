@@ -79,7 +79,7 @@ const Title = styled.h1`
 
 const InfoText = styled.p`
 	font-family: ${fonts.montserrat};
-	font-size: 11px;
+	font-size: 13px;
 	margin-top: 5px;
 
 	@media ${media.tablet} {
@@ -104,7 +104,7 @@ const ContactContainer = styled.div`
 const Link = styled.a`
 	margin: 0;
 	font-family: ${fonts.montserrat};
-	font-size: 10px;
+	font-size: 13px;
 	line-height: 1.2rem;
 	color: black;
 	text-decoration: none;
@@ -127,16 +127,15 @@ const Link = styled.a`
 const ContactTitle = styled.h6`
 	margin: 0;
 	font-family: ${fonts.montserrat};
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 0.1rem;
 	text-decoration: underline;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 2px;
 	text-underline-offset: 0.3rem;
 
 	@media ${media.tablet} {
 		font-size: 16px;
-		text-decoration-thickness: 2px;
 		text-underline-offset: 0.4rem;
 	}
 
