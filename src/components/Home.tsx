@@ -36,7 +36,7 @@ const BigContainer = styled.div`
 
 const TitleName = styled.h1`
 	display: inline-block;
-	font-family: ${fonts.newYork};
+	font-family: 'NewYork', sans-serif;
 	font-size: 55px;
 	font-weight: 100;
 	margin-bottom: 5px;
