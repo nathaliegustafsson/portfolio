@@ -12,7 +12,7 @@ function Cv() {
 				</div>
 				<ContactContainer>
 					<Link
-						href="/cv-files/CV-swe.pdf"
+						href="/cv-files/CV-Nathalie-(sv).pdf"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -21,7 +21,7 @@ function Cv() {
 				</ContactContainer>
 				<ContactContainer>
 					<Link
-						href="/cv-files/CV-eng.pdf"
+						href="/cv-files/CV-Nathalie-(eng).pdf"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
