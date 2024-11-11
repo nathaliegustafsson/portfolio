@@ -108,12 +108,6 @@ const Link = styled.a`
 	font-family: ${fonts.montserrat};
 	color: black;
 	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
-		text-decoration-thickness: 0.01rem;
-		text-underline-offset: 0.3rem;
-	}
 `;
 
 const ContactTitle = styled.h6`
@@ -125,6 +119,10 @@ const ContactTitle = styled.h6`
 	text-decoration: underline;
 	text-decoration-thickness: 2px;
 	text-underline-offset: 0.3rem;
+
+	&:hover {
+		font-weight: 700;
+	}
 
 	@media ${media.tablet} {
 		font-size: 16px;
