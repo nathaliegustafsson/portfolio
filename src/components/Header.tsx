@@ -131,7 +131,7 @@ const HeaderLink = styled(Link)`
 
 	&:hover {
 		text-decoration: underline;
-		text-decoration-thickness: 0.01rem;
+		text-decoration-thickness: 0.1rem;
 		text-underline-offset: 0.3rem;
 	}
 
