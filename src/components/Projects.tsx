@@ -97,6 +97,7 @@ const BigContainer = styled.div`
 
 	@media ${media.desktop} {
 		max-width: 1100px;
+		margin-bottom: 40px;
 	}
 
 	@media ${media.desktopXL} {
@@ -219,7 +220,7 @@ const ProjectNameBigContainer = styled.div`
 
 const NumberAndTitleContainer = styled.div`
 	display: flex;
-	gap: 5px;
+	gap: 8px;
 
 	@media ${media.tablet} {
 		gap: 15px;
@@ -231,7 +232,7 @@ const NumberAndTitleContainer = styled.div`
 `;
 
 const ProjectNumberContainer = styled.div`
-	width: 25px;
+	width: auto;
 `;
 
 const ProjectNumber = styled.p`

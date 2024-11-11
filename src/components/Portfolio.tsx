@@ -49,6 +49,10 @@ const BigContainer = styled.div`
 	width: 85%;
 	padding: 20px;
 	max-width: 1000px;
+
+	@media ${media.desktop} {
+		margin-bottom: 40px;
+	}
 `;
 
 const Container = styled.div`
