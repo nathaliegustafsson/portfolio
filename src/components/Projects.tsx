@@ -223,11 +223,7 @@ const NumberAndTitleContainer = styled.div`
 	gap: 8px;
 
 	@media ${media.tablet} {
-		gap: 15px;
-	}
-
-	@media ${media.desktop} {
-		gap: 25px;
+		gap: 10px;
 	}
 `;
 
