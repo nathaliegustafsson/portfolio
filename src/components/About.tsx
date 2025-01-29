@@ -14,7 +14,7 @@ function About() {
 		},
 		{
 			category: 'Web Development:',
-			tools: ['HTML, CSS, SCSS, Styled Components'],
+			tools: ['HTML, CSS, SCSS, Styled Components, MUI'],
 		},
 		{
 			category: 'Version Control:',
