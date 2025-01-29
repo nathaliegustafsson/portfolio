@@ -23,7 +23,7 @@ function About() {
 		{
 			category: 'Other Technologies:',
 			tools: [
-				'React-Native, Redux, Firebase, MongoDB, BigCommerce, Stencil, Jest ',
+				'React-Native, Expo, Xcode, Redux, Firebase, MongoDB, BigCommerce, Stencil, Jest ',
 			],
 		},
 	];
