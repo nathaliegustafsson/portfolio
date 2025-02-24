@@ -46,6 +46,10 @@ function Projects() {
 						</ImageContainer>
 						<TextContainer>
 							<DescriptionText>{project.description}</DescriptionText>
+							<TechnologiesContainer>
+								<SectionTitle>TECHNOLOGIES</SectionTitle>
+								<TechnologiesText>{project.technologies}</TechnologiesText>
+							</TechnologiesContainer>
 							<UrlContainer>
 								<SectionTitle>URL</SectionTitle>
 								<UrlLink
@@ -56,10 +60,6 @@ function Projects() {
 									{project.url}
 								</UrlLink>
 							</UrlContainer>
-							<TechnologiesContainer>
-								<SectionTitle>TECHNOLOGIES</SectionTitle>
-								<TechnologiesText>{project.technologies}</TechnologiesText>
-							</TechnologiesContainer>
 							{project.collaborators && project.collaborators.length > 0 && (
 								<CollaboratorsContainer>
 									<SectionTitle>COLLABORATORS</SectionTitle>
@@ -316,10 +316,6 @@ const UrlContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-
-	@media ${media.tablet} {
-		gap: 15px;
-	}
 `;
 
 const SectionTitle = styled.h6`
@@ -328,13 +324,9 @@ const SectionTitle = styled.h6`
 	font-size: 15px;
 	font-weight: 600;
 	letter-spacing: 0.1rem;
-	text-decoration: underline;
-	text-decoration-thickness: 2px;
-	text-underline-offset: 0.3rem;
 
 	@media ${media.tablet} {
 		font-size: 16px;
-		text-underline-offset: 0.4rem;
 	}
 
 	@media ${media.desktop} {
@@ -345,7 +337,7 @@ const SectionTitle = styled.h6`
 const UrlLink = styled.a`
 	font-family: ${fonts.montserrat};
 	font-size: 14px;
-	text-decoration: none;
+	text-underline-offset: 0.1rem;
 	color: black;
 
 	&:hover {
@@ -365,10 +357,6 @@ const TechnologiesContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-
-	@media ${media.tablet} {
-		gap: 15px;
-	}
 `;
 
 const TechnologiesText = styled(DescriptionText)``;
@@ -396,10 +384,6 @@ const CollaboratorsContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-
-	@media ${media.tablet} {
-		gap: 15px;
-	}
 `;
 
 const CollaboratorNameList = styled.li`
