@@ -18,12 +18,7 @@ function Portfolio() {
 							<StyledLink to={`/portfolio/${project.id}`}>
 								<ProjectList>
 									<NumberAndTitleContainer>
-										<ProjectNumberContainer>
-											<ProjectNumber>{project.number}.</ProjectNumber>
-										</ProjectNumberContainer>
-										<div>
-											<ProjectName>{project.title}</ProjectName>
-										</div>
+										<ProjectName>{project.title}</ProjectName>
 									</NumberAndTitleContainer>
 									<ReadMoreContainer>
 										<ReadMoreText>Read more</ReadMoreText>
@@ -145,24 +140,6 @@ const NumberAndTitleContainer = styled.div`
 
 	@media ${media.tablet} {
 		gap: 20px;
-	}
-`;
-
-const ProjectNumberContainer = styled.div`
-	width: 25px;
-`;
-
-const ProjectNumber = styled.p`
-	margin: 0;
-	font-family: 'NewYork', sans-serif;
-	font-size: 22px;
-
-	@media ${media.tablet} {
-		font-size: 24px;
-	}
-
-	@media ${media.desktop} {
-		font-size: 28px;
 	}
 `;
 

@@ -29,20 +29,21 @@ function Projects() {
 				</TitleContainer>
 				<ProjectsMainContent>
 					<ProjectNameBigContainer>
-						<NumberAndTitleContainer>
-							<ProjectNumberContainer>
-								<ProjectNumber>{project.number}.</ProjectNumber>
-							</ProjectNumberContainer>
-							<div>
-								<ProjectName>{project.title}</ProjectName>
-							</div>
-						</NumberAndTitleContainer>
+						<ProjectName>{project.title}</ProjectName>
 						<Line />
 					</ProjectNameBigContainer>
 					<ProjectMainContent>
 						<ImageContainer>
-							<ProjectImage src={project.image1} alt="project-image1" loading="lazy"/>
-							<ProjectImage src={project.image2} alt="project-image2" loading="lazy"/>
+							<ProjectImage
+								src={project.image1}
+								alt="project-image1"
+								loading="lazy"
+							/>
+							<ProjectImage
+								src={project.image2}
+								alt="project-image2"
+								loading="lazy"
+							/>
 						</ImageContainer>
 						<TextContainer>
 							<DescriptionText>{project.description}</DescriptionText>
@@ -218,29 +219,6 @@ const ProjectNameBigContainer = styled.div`
 	}
 `;
 
-const NumberAndTitleContainer = styled.div`
-	display: flex;
-	gap: 8px;
-
-	@media ${media.tablet} {
-		gap: 10px;
-	}
-`;
-
-const ProjectNumberContainer = styled.div`
-	width: auto;
-`;
-
-const ProjectNumber = styled.p`
-	margin: 0;
-	font-family: 'NewYork', sans-serif;
-	font-size: 25px;
-
-	@media ${media.desktop} {
-		font-size: 30px;
-	}
-`;
-
 const ProjectName = styled.h4`
 	margin: 0;
 	font-family: 'NewYork', sans-serif;
@@ -394,6 +372,7 @@ const CollaboratorNameList = styled.li`
 const CollaboratorList = styled.ul`
 	margin: 0;
 	padding: 0;
+	list-style: none;
 `;
 
 export default Projects;
