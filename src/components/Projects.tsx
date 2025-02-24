@@ -315,10 +315,12 @@ const SectionTitle = styled.h6`
 const UrlLink = styled.a`
 	font-family: ${fonts.montserrat};
 	font-size: 14px;
-	text-underline-offset: 0.1rem;
 	color: black;
+	text-decoration-thickness: 0.01rem;
+	text-underline-offset: 0.3rem;
 
 	&:hover {
+		text-decoration-thickness: 0.1rem;
 		font-weight: 600;
 	}
 

@@ -95,10 +95,6 @@ const ContactContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-
-	@media ${media.tablet} {
-		gap: 15px;
-	}
 `;
 
 const Link = styled.a`
@@ -107,12 +103,12 @@ const Link = styled.a`
 	font-size: 13px;
 	line-height: 1.2rem;
 	color: black;
-	text-decoration: none;
+	text-decoration-thickness: 0.01rem;
+	text-underline-offset: 0.3rem;
 
 	&:hover {
-		text-decoration: underline;
-		text-decoration-thickness: 0.01rem;
-		text-underline-offset: 0.3rem;
+		text-decoration-thickness: 0.1rem;
+		font-weight: 600;
 	}
 
 	@media ${media.tablet} {
@@ -130,13 +126,9 @@ const ContactTitle = styled.h6`
 	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 0.1rem;
-	text-decoration: underline;
-	text-decoration-thickness: 2px;
-	text-underline-offset: 0.3rem;
 
 	@media ${media.tablet} {
 		font-size: 16px;
-		text-underline-offset: 0.4rem;
 	}
 
 	@media ${media.desktop} {
