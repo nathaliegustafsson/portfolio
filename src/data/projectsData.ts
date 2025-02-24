@@ -3,7 +3,6 @@ import { Project } from '../types/projectTypes';
 export const projects: Project[] = [
 	{
 		id: 'bumpymonster',
-		number: '01',
 		title: 'Bumpy Monster',
 		description:
 			'This is one of my favorite projects. Together with four other students from my class, we created a game called “Bumpy Monster.” It is a platform game where the goal is to reach as high up as possible. Along the way, Bumpy encounters enemies and can collect power-ups.',
@@ -31,7 +30,6 @@ export const projects: Project[] = [
 	},
 	{
 		id: 'plateup',
-		number: '02',
 		title: 'Plate Up',
 		description:
 			'This project was developed as part of my final exam in collaboration with two fellow students. PlateUp is a mobile app where users can share and discover recipes. Users can contribute by uploading their own recipes, save and explore others creations, and search for specific meals or desserts. The goal of PlateUp is to create a product that aligns with our passion for food, enhances our development skills, and provides a unique culinary experience.',
@@ -50,7 +48,6 @@ export const projects: Project[] = [
 	},
 	{
 		id: 'ourfurnishedhome',
-		number: '03',
 		title: 'Our Furnished Home',
 		description:
 			'Our Furnished Home is a front-end webshop project focused on creating a straightforward, user-friendly platform for browsing and purchasing home decor and furnishing products. The application allows users to add items to a basket, fill out their details, and proceed to order. In addition, an admin interface was developed to handle product management, where admins can add, edit, or remove items as needed.',
@@ -68,7 +65,6 @@ export const projects: Project[] = [
 	},
 	{
 		id: 'wickandwillow',
-		number: '04',
 		title: 'Wick & Willow',
 		description: 'Wick & Willow is a mockup webshop. The focus of this project was on the design, involving the creation of a graphic profile and logo using Illustrator, followed by the development of a wireframe and mockup of the web design using Photoshop. The website is non-interactive, serving as a visual representation from the mockup.',
 		image1: '/projectImages/wick-and-willow-1.png',
