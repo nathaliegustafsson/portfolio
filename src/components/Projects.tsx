@@ -41,8 +41,8 @@ function Projects() {
 					</ProjectNameBigContainer>
 					<ProjectMainContent>
 						<ImageContainer>
-							<ProjectImage src={project.image1} alt="project-image1" />
-							<ProjectImage src={project.image2} alt="project-image2" />
+							<ProjectImage src={project.image1} alt="project-image1" loading="lazy"/>
+							<ProjectImage src={project.image2} alt="project-image2" loading="lazy"/>
 						</ImageContainer>
 						<TextContainer>
 							<DescriptionText>{project.description}</DescriptionText>

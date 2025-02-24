@@ -34,7 +34,7 @@ function About() {
 				<Title>About</Title>
 				<AboutContent>
 					<ImageContainer>
-						<Image src="/cv-picture.jpg" alt="cv-picture" />
+						<Image src="/cv-picture.jpg" alt="cv-picture" loading="lazy"/>
 					</ImageContainer>
 					<TextContainer>
 						<AboutText>
