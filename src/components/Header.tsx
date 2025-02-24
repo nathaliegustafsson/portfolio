@@ -133,11 +133,13 @@ const HeaderLink = styled(Link)<{ $active: boolean }>`
 	text-decoration: none;
 	color: black;
 	cursor: pointer;
-	border-bottom: ${(props) => (props.$active ? '2px solid black' : 'none')};
-	padding-bottom: 0.1rem;
+	font-weight: ${(props) => (props.$active ? '600' : 'none')};
 
 	@media ${media.tablet} {
 		font-size: 16px;
+		border-bottom: ${(props) => (props.$active ? '2px solid black' : 'none')};
+		font-weight: ${(props) => (props.$active ? '500' : 'none')};
+		padding-bottom: 0.1rem;
 	}
 `;
 
