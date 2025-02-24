@@ -5,23 +5,23 @@ import { fonts } from '../styles/typography';
 function About() {
 	const technologies = [
 		{
-			category: 'Languages and Frameworks:',
+			category: 'Languages and Frameworks',
 			tools: ['JavaScript, TypeScript, React, Vue, Node.js'],
 		},
 		{
-			category: 'Design Tools:',
+			category: 'Design Tools',
 			tools: ['Figma'],
 		},
 		{
-			category: 'Web Development:',
+			category: 'Web Development',
 			tools: ['HTML, CSS, SCSS, Styled Components, MUI'],
 		},
 		{
-			category: 'Version Control:',
+			category: 'Version Control',
 			tools: ['Git, Github, Bitbucket'],
 		},
 		{
-			category: 'Other Technologies:',
+			category: 'Other Technologies',
 			tools: [
 				'React-Native, Expo, Xcode, Redux, Firebase, MongoDB, BigCommerce, Stencil, Jest ',
 			],
