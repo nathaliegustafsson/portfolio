@@ -10,7 +10,7 @@ function Portfolio() {
 			<Container>
 				<div>
 					<Title>Portfolio</Title>
-					<InfoText>Here's some projects I've done so far.</InfoText>
+					<InfoText>Here's some projects I've done.</InfoText>
 				</div>
 				<ProjectsBigContainer>
 					{projects.map((project) => (
