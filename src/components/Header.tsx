@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { media } from '../styles/breakpoints';
 import { fonts } from '../styles/typography';
@@ -8,6 +8,7 @@ function Header() {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 	const menuRef = useRef<HTMLDivElement | null>(null);
 	const hamburgerRef = useRef<HTMLImageElement>(null);
+	const location = useLocation();
 
 	const headerLinks = [
 		{ text: 'Home', href: '/' },
@@ -47,7 +48,7 @@ function Header() {
 				</LogoLink>
 				<LinksContainer>
 					{headerLinks.map((link) => (
-						<HeaderLink key={link.text} to={link.href}>
+						<HeaderLink key={link.text} to={link.href} $active={location.pathname === link.href}>
 							{link.text}
 						</HeaderLink>
 					))}
@@ -61,7 +62,11 @@ function Header() {
 				{isMenuOpen && (
 					<MobileMenu ref={menuRef}>
 						{headerLinks.map((link) => (
-							<HeaderLink key={link.text} to={link.href}>
+							<HeaderLink
+								key={link.text}
+								to={link.href}
+								$active={location.pathname === link.href}
+							>
 								{link.text}
 							</HeaderLink>
 						))}
@@ -122,18 +127,14 @@ const LinksContainer = styled.div`
 	}
 `;
 
-const HeaderLink = styled(Link)`
+const HeaderLink = styled(Link)<{ $active: boolean }>`
 	font-family: ${fonts.montserrat};
 	font-size: 18px;
 	text-decoration: none;
 	color: black;
 	cursor: pointer;
-
-	&:hover {
-		text-decoration: underline;
-		text-decoration-thickness: 0.1rem;
-		text-underline-offset: 0.3rem;
-	}
+	border-bottom: ${(props) => (props.$active ? '2px solid black' : 'none')};
+	padding-bottom: 0.1rem;
 
 	@media ${media.tablet} {
 		font-size: 16px;
