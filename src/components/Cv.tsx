@@ -3,6 +3,17 @@ import { media } from '../styles/breakpoints';
 import { fonts } from '../styles/typography';
 
 function Cv() {
+	const cvLinks = [
+		{
+			language: 'SWEDISH',
+			href: '/cv-files/Nathalie-Gustafsson-CV.pdf',
+		},
+		{
+			language: 'ENGLISH',
+			href: '/cv-files/Nathalie-Gustafsson-CV-(eng).pdf',
+		},
+	];
+
 	return (
 		<BigContainer>
 			<Container>
@@ -11,22 +22,17 @@ function Cv() {
 					<InfoText>Here's my CV in both Swedish and English.</InfoText>
 				</div>
 				<ContactContainer>
-					<Link
-						href="/cv-files/CV-Nathalie-(sv).pdf"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<ContactTitle>SWEDISH</ContactTitle>
-					</Link>
-				</ContactContainer>
-				<ContactContainer>
-					<Link
-						href="/cv-files/CV-Nathalie-(eng).pdf"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<ContactTitle>ENGLISH</ContactTitle>
-					</Link>
+					{cvLinks.map((link) => (
+						<Link
+							key={link.language}
+							href={link.href}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<ContactTitle>{link.language}</ContactTitle>
+							<Icon src="/arrow-up-right.svg" />
+						</Link>
+					))}
 				</ContactContainer>
 			</Container>
 		</BigContainer>
@@ -103,8 +109,15 @@ const ContactContainer = styled.div`
 	}
 `;
 
+const Icon = styled.img`
+	height: 15px;
+`;
+
 const Link = styled.a`
-	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
 	font-family: ${fonts.montserrat};
 	color: black;
 	text-decoration: none;
