@@ -5,17 +5,17 @@ function Footer() {
 	const footerLinks = [
 		{
 			href: 'mailto:nath.gustafsson@gmail.com',
-			src: '/icons/email-icon.svg',
+			icon: '/icons/email-icon.svg',
 			alt: 'email-icon',
 		},
 		{
 			href: 'https://github.com/nathaliegustafsson',
-			src: '/icons/github-icon.svg',
+			icon: '/icons/github-icon.svg',
 			alt: 'github-icon',
 		},
 		{
 			href: 'https://www.linkedin.com/in/nathalie-gustafsson-5393b415a/',
-			src: '/icons/linkedin-icon.svg',
+			icon: '/icons/linkedin-icon.svg',
 			alt: 'linkedin-icon',
 		},
 	];
@@ -30,7 +30,7 @@ function Footer() {
 							href={link.href}
 							rel="noopener noreferrer"
 						>
-							<Icon src={link.src} alt={link.alt} />
+							<Icon src={link.icon} alt={link.alt} />
 						</a>
 					) : (
 						<a
@@ -39,7 +39,7 @@ function Footer() {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<Icon src={link.src} alt={link.alt} />
+							<Icon src={link.icon} alt={link.alt} />
 						</a>
 					)
 				)}
