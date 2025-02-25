@@ -171,7 +171,6 @@ const ContactTitle = styled.h6`
 
 const Icon = styled.img`
 	height: 18px;
-	cursor: pointer;
 
 	@media ${media.mobile} {
 		height: 22px;
