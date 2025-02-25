@@ -264,11 +264,7 @@ const ProjectImage = styled.img`
 const TextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
-
-	@media ${media.tablet} {
-		gap: 20px;
-	}
+	gap: 25px;
 
 	@media ${media.desktop} {
 		max-width: 350px;

@@ -91,7 +91,7 @@ const InfoText = styled.p`
 	margin-top: 5px;
 
 	@media ${media.tablet} {
-		font-size: 14px;
+		font-size: 15px;
 	}
 
 	@media ${media.desktop} {
@@ -110,7 +110,11 @@ const ContactContainer = styled.div`
 `;
 
 const Icon = styled.img`
-	height: 15px;
+	height: 14px;
+
+	@media ${media.mobile} {
+		height: 18px;
+	}
 `;
 
 const Link = styled.a`
