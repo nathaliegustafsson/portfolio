@@ -30,7 +30,7 @@ function Cv() {
 							rel="noopener noreferrer"
 						>
 							<ContactTitle>{link.language}</ContactTitle>
-							<Icon src="/arrow-up-right.svg" />
+							<Icon src="/icons/arrow-up-right.svg" />
 						</Link>
 					))}
 				</ContactContainer>

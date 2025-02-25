@@ -22,7 +22,7 @@ function Projects() {
 					<Title>Portfolio</Title>
 					<StyledLink to={`/portfolio`}>
 						<GoBackContainer>
-							<Arrow src="/arrow-left.png" alt="arrow-left" />
+							<Arrow src="/icons/arrow-left.svg" alt="left-arrow" />
 							<GoBackText>Go back</GoBackText>
 						</GoBackContainer>
 					</StyledLink>

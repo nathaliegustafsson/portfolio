@@ -44,7 +44,7 @@ function Header() {
 		<BigContainer>
 			<Container>
 				<LogoLink to="/">
-					<LogoImg src="/initials-logo.png" alt="initials-logo" />
+					<LogoImg src="/initials-logo.svg" alt="initials-logo" />
 				</LogoLink>
 				<LinksContainer>
 					{headerLinks.map((link) => (
