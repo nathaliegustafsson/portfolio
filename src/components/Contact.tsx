@@ -176,10 +176,6 @@ const Icon = styled.img`
 	@media ${media.mobile} {
 		height: 22px;
 	}
-
-	@media ${media.desktopXL} {
-		height: 40px;
-	}
 `;
 
 export default Contact;
