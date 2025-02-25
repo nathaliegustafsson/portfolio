@@ -92,7 +92,7 @@ const Line = styled.div`
 	}
 `;
 
-const RoleTitle = styled.h3`
+const RoleTitle = styled.h2`
 	font-family: ${fonts.montserrat};
 	font-size: 18px;
 	font-weight: 400;
@@ -107,7 +107,7 @@ const RoleTitle = styled.h3`
 	}
 `;
 
-const ShortText = styled.h6`
+const ShortText = styled.h3`
 	font-family: ${fonts.montserrat};
 	font-size: 13px;
 	font-weight: 400;
