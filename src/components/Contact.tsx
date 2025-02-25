@@ -3,6 +3,27 @@ import { media } from '../styles/breakpoints';
 import { fonts } from '../styles/typography';
 
 function Contact() {
+	const contactLinks = [
+		{
+			icon: '/icons/email-icon.svg',
+			title: 'EMAIL',
+			href: 'mailto:nath.gustafsson@gmail.com',
+			text: 'nath.gustafsson@gmail.com',
+		},
+		{
+			icon: '/icons/github-icon.svg',
+			title: 'GITHUB',
+			href: 'https://github.com/nathaliegustafsson',
+			text: 'https://github.com/nathaliegustafsson',
+		},
+		{
+			icon: '/icons/linkedin-icon.svg',
+			title: 'LINKEDIN',
+			href: 'https://linkedin.com/in/nathalie-gustafsson-5393b415a/',
+			text: 'https://linkedin.com/in/nathalie-gustafsson-5393b415a/',
+		},
+	];
+
 	return (
 		<BigContainer>
 			<Container>
@@ -10,22 +31,28 @@ function Contact() {
 					<Title>Contact</Title>
 					<InfoText>You can find me here.</InfoText>
 				</div>
-				<ContactContainer>
-					<ContactTitle>EMAIL</ContactTitle>
-					<Link href="mailto:nath.gustafsson@gmail.com">
-						nath.gustafsson@gmail.com
-					</Link>
-				</ContactContainer>
-				<ContactContainer>
-					<ContactTitle>GITHUB</ContactTitle>
-					<Link
-						href="https://github.com/nathaliegustafsson"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						https://github.com/nathaliegustafsson
-					</Link>
-				</ContactContainer>
+
+				{contactLinks.map((link, index) =>
+					link.href.startsWith('mailto:') ? (
+						<ContactContainer key={index}>
+							<IconTitleContainer>
+								<Icon src={link.icon} />
+								<ContactTitle>{link.title}</ContactTitle>
+							</IconTitleContainer>
+							<Link href={link.href}>{link.text}</Link>
+						</ContactContainer>
+					) : (
+						<ContactContainer key={index}>
+							<IconTitleContainer>
+								<Icon src={link.icon} />
+								<ContactTitle>{link.title}</ContactTitle>
+							</IconTitleContainer>
+							<Link href={link.href} target="_blank" rel="noopener noreferrer">
+								{link.text}
+							</Link>
+						</ContactContainer>
+					)
+				)}
 			</Container>
 		</BigContainer>
 	);
@@ -83,7 +110,7 @@ const InfoText = styled.p`
 	margin-top: 5px;
 
 	@media ${media.tablet} {
-		font-size: 14px;
+		font-size: 15px;
 	}
 
 	@media ${media.desktop} {
@@ -112,12 +139,18 @@ const Link = styled.a`
 	}
 
 	@media ${media.tablet} {
-		font-size: 14px;
+		font-size: 15px;
 	}
 
 	@media ${media.desktop} {
 		font-size: 16px;
 	}
+`;
+
+const IconTitleContainer = styled.div`
+	display: flex;
+	align-items: flex-end;
+	gap: 10px;
 `;
 
 const ContactTitle = styled.h6`
@@ -133,6 +166,19 @@ const ContactTitle = styled.h6`
 
 	@media ${media.desktop} {
 		font-size: 18px;
+	}
+`;
+
+const Icon = styled.img`
+	height: 18px;
+	cursor: pointer;
+
+	@media ${media.mobile} {
+		height: 22px;
+	}
+
+	@media ${media.desktopXL} {
+		height: 40px;
 	}
 `;
 
