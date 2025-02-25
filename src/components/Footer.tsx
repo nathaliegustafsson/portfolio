@@ -4,6 +4,11 @@ import { media } from '../styles/breakpoints';
 function Footer() {
 	const footerLinks = [
 		{
+			href: 'mailto:nath.gustafsson@gmail.com',
+			src: '/icons/email-icon.svg',
+			alt: 'email-icon',
+		},
+		{
 			href: 'https://github.com/nathaliegustafsson',
 			src: '/icons/github-icon.svg',
 			alt: 'github-icon',
@@ -18,16 +23,26 @@ function Footer() {
 	return (
 		<Container>
 			<IconContainer>
-				{footerLinks.map((link, index) => (
-					<a
-						key={index}
-						href={link.href}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Icon src={link.src} alt={link.alt} />
-					</a>
-				))}
+				{footerLinks.map((link, index) =>
+					link.href.startsWith('mailto:') ? (
+						<a
+							key={index}
+							href={link.href}
+							rel="noopener noreferrer"
+						>
+							<Icon src={link.src} alt={link.alt} />
+						</a>
+					) : (
+						<a
+							key={index}
+							href={link.href}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Icon src={link.src} alt={link.alt} />
+						</a>
+					)
+				)}
 			</IconContainer>
 		</Container>
 	);
@@ -45,7 +60,7 @@ const Container = styled.div`
 const IconContainer = styled.div`
 	display: flex;
 	justify-content: center;
-	gap: 20px;
+	gap: 25px;
 
 	@media ${media.mobile} {
 		gap: 30px;
@@ -53,7 +68,7 @@ const IconContainer = styled.div`
 `;
 
 const Icon = styled.img`
-	height: 30px;
+	height: 28px;
 	cursor: pointer;
 
 	&:hover {
@@ -62,10 +77,6 @@ const Icon = styled.img`
 
 	@media ${media.mobile} {
 		height: 35px;
-	}
-
-	@media ${media.desktopXL} {
-		height: 40px;
 	}
 `;
 
