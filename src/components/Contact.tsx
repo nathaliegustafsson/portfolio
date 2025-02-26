@@ -108,6 +108,7 @@ const InfoText = styled.p`
 	font-family: ${fonts.montserrat};
 	font-size: 13px;
 	margin-top: 5px;
+	margin-bottom: 0;
 
 	@media ${media.tablet} {
 		font-size: 15px;
